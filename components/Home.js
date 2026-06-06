@@ -7,9 +7,10 @@ export default Home = () => {
       <div>
         <h2>{N5Kanji[1].Kanji}</h2>
         <table>
-          {Object.entries(N5Kanji[1]).map((data, key) => (
-            <tbody>
+        <tbody>
               <tr>
+          {Object.entries(N5Kanji[1]).map((data, key) => (
+            
                 <td
                   key={data}
                   style={{
@@ -20,9 +21,10 @@ export default Home = () => {
                 >
                   {data}
                 </td>
-              </tr>
-            </tbody>
+              
           ))}
+          </tr>
+            </tbody>
         </table>
       </div>
     </>
