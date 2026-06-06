@@ -16,6 +16,8 @@ export default Home = () => {
                     border: "1px solid #ddd",
                     padding: "8px",
                     textAlign: "left",
+                    fontWeight: "bold",
+                    fontSize: "1.2em",
                   }}
                 >
                   {data[0]}:{data[1]}
