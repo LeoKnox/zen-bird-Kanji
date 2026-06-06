@@ -6,11 +6,13 @@ export default Home = () => {
       <h1>Home</h1>
       <div>
         <h2>{N5Kanji[1].Kanji}</h2>
-        <h3>
-          {N5Kanji[1].Furigana}
-          {N5Kanji[1].Romaji}
+        <table>
+            <tr>
+          <h3>{N5Kanji[1].Furigana}</h3>
+          <h3>{N5Kanji[1].Romaji}</h3>
           {N5Kanji[1].Meaning}
-        </h3>
+          </tr>
+        </table>
       </div>
     </>
   );
