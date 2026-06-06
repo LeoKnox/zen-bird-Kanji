@@ -7,11 +7,22 @@ export default Home = () => {
       <div>
         <h2>{N5Kanji[1].Kanji}</h2>
         <table>
-            <tr>
-          <h3>{N5Kanji[1].Furigana}</h3>
-          <h3>{N5Kanji[1].Romaji}</h3>
-          {N5Kanji[1].Meaning}
-          </tr>
+          {Object.entries(N5Kanji[1]).map((data, key) => (
+            <tbody>
+              <tr>
+                <td
+                  key={data}
+                  style={{
+                    border: "1px solid #ddd",
+                    padding: "8px",
+                    textAlign: "left",
+                  }}
+                >
+                  {data}
+                </td>
+              </tr>
+            </tbody>
+          ))}
         </table>
       </div>
     </>
