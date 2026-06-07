@@ -3,6 +3,9 @@ import { useState } from "react";
 
 export default Home = () => {
   const [kanjiList, setKanjiList] = useState([]);
+  const updateKanjiList = (e) => {
+    e.target.checked ? setKanjiList("true") : setKanjiList(false);
+  };
   return (
     <>
       <h1>Home</h1>
@@ -17,7 +20,7 @@ export default Home = () => {
                   <input
                     type="checkbox"
                     value={kanjiId}
-                    onClick={() => setKanjiList([...kanjiList, kanjiId])}
+                    onClick={() => updateKanjiList()}
                   />
                   {kanjiId}
                 </td>
