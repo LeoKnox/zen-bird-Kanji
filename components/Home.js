@@ -1,16 +1,26 @@
 import { N5Kanji } from "./N5Kanji.js";
+import { useState } from "react";
 
 export default Home = () => {
+  const [kanjiList, setKanjiList] = useState([]);
   return (
     <>
       <h1>Home</h1>
       <div>
-        <h2>{N5Kanji[1].Kanji}</h2>
+        <h2>家</h2>
+        <p>{kanjiList}</p>
         <table>
           <tbody>
-            {N5Kanji.map((row) => (
+            {N5Kanji.map((row, kanjiId) => (
               <tr>
-                <td><input type="checkbox"/></td>
+                <td>
+                  <input
+                    type="checkbox"
+                    value={kanjiId}
+                    onClick={() => setKanjiList([...kanjiList, kanjiId])}
+                  />
+                  {kanjiId}
+                </td>
                 {Object.entries(row).map((data) => (
                   <td
                     key={data}
