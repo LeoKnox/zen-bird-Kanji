@@ -10,7 +10,7 @@ export default Home = () => {
           <tbody>
             {N5Kanji.map((row) => (
               <tr>
-                <td>c</td>
+                <td><input type="checkbox"/></td>
                 {Object.entries(row).map((data) => (
                   <td
                     key={data}
