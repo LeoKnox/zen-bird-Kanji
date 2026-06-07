@@ -8,24 +8,25 @@ export default Home = () => {
         <h2>{N5Kanji[1].Kanji}</h2>
         <table>
           <tbody>
-            {N5Kanji.map((row) => 
-            <tr>
-              {Object.entries(row).map((data) => (
-                <td
-                  key={data}
-                  style={{
-                    border: "1px solid #ddd",
-                    padding: "8px",
-                    textAlign: "left",
-                    fontWeight: "bold",
-                    fontSize: "1.2em",
-                  }}
-                >
-                  {data[0]}:{data[1]}
-                </td>
-              ))}
-            </tr>
-)}
+            {N5Kanji.map((row) => (
+              <tr>
+                <td>c</td>
+                {Object.entries(row).map((data) => (
+                  <td
+                    key={data}
+                    style={{
+                      border: "1px solid #ddd",
+                      padding: "8px",
+                      textAlign: "left",
+                      fontWeight: "bold",
+                      fontSize: "1em",
+                    }}
+                  >
+                    {data[0]}:{data[1]}
+                  </td>
+                ))}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
