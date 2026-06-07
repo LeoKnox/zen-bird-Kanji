@@ -20,7 +20,7 @@ export default Home = () => {
                   <input
                     type="checkbox"
                     value={kanjiId}
-                    onClick={() => updateKanjiList()}
+                    onClick={(e) => updateKanjiList(e)}
                   />
                   {kanjiId}
                 </td>
