@@ -6,7 +6,7 @@ export default Home = () => {
   const updateKanjiList = (e) => {
     e.target.checked
       ? setKanjiList(e.target.value)
-      : setKanjiList(kanjiList.filter(e.target.value));
+      : setKanjiList((kanji) => kanji.filter(e.target.value !== kanji));
   };
   return (
     <>
