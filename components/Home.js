@@ -4,7 +4,9 @@ import { useState } from "react";
 export default Home = () => {
   const [kanjiList, setKanjiList] = useState([]);
   const updateKanjiList = (e) => {
-    e.target.checked ? setKanjiList("true") : setKanjiList(false);
+    e.target.checked
+      ? setKanjiList(e.target.value)
+      : setKanjiList(kanjiList.filter(e.target.value));
   };
   return (
     <>
