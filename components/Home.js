@@ -5,8 +5,10 @@ export default Home = () => {
   const [kanjiList, setKanjiList] = useState([]);
   const updateKanjiList = (e) => {
     e.target.checked
-      ? setKanjiList(e.target.value)
-      : setKanjiList(kanjiList.toSpliced(e.target.value, 1));
+      ? setKanjiList([...kanjiList, e.target.value])
+      : setKanjiList((kanji) =>
+          kanji.filter((_, index) => e.target.value !== index)
+        );
   };
   return (
     <>
