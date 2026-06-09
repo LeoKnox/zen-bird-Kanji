@@ -10,6 +10,7 @@ body {
 td {
   color: darkgreen;
   border: 10px solid;
+  broder-radius: 20px;
   border-image: linear-gradient(
       to bottom,
       #506b3c 0%,
