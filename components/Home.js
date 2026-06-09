@@ -15,7 +15,13 @@ export default Home = () => {
       <h1>Home</h1>
       <div>
         <h2>家</h2>
-        <p>{kanjiList}</p>
+        <p
+          style={{
+            height: "1em",
+          }}
+        >
+          {kanjiList}
+        </p>
         <table>
           <tbody>
             {N5Kanji.map((row, kanjiId) => (
