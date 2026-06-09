@@ -20,7 +20,15 @@ td {
     1;
 }
 
-td input[type="checkbox"]:before {
-  background-color: blue;
-  accent-color: brown;
+td input[type="checkbox"] {
+  appearance: none;
+  margin-bottom: 0;
+  width: 1em;
+  height: 1em;
+  background: brown;
+  accent-color: purple;
+}
+
+td input[type="checkbox"]::checked {
+  appearance: revert;
 }
