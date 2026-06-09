@@ -25,10 +25,10 @@ td input[type="checkbox"] {
   margin-bottom: 0;
   width: 1em;
   height: 1em;
-  background: gray;
+  background: brown;
 }
 
 td input[type="checkbox"]:checked {
   appearance: revert;
-  accent-color: brown;
+  accent-color: gold;
 }
