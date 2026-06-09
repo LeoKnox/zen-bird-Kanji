@@ -13,8 +13,13 @@ td {
   border-image: linear-gradient(
       to bottom,
       #506b3c 0%,
-      #a5c97a 50%,
+      #88a564 50%,
       #506b3c 100%
     )
     1;
+}
+
+input {
+  background-color: blue;
+  accent-color: brown;
 }
