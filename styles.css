@@ -20,7 +20,10 @@ td {
     1;
 }
 
-input {
+td input {
+  appearance: none;
+  width: 10px;
+  border: 2px solid orange;
   background-color: blue;
   accent-color: brown;
 }
