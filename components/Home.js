@@ -32,7 +32,6 @@ export default Home = () => {
                   <td
                     key={data}
                     style={{
-                      border: "1px solid #ddd",
                       padding: "8px",
                       textAlign: "left",
                       fontWeight: "bold",
