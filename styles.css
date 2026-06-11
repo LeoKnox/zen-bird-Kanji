@@ -33,9 +33,10 @@ export default Home = () => {
                       value={kanjiId}
                       onClick={(e) => updateKanjiList(e)}
                     />
-                    {kanjiId}
-                  </p>
+                    
+                  
                   {row.Kanji}
+                  </p>
                 </td>
                 {Object.entries(row).map((data) => (
                   <td
