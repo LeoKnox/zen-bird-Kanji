@@ -26,40 +26,38 @@ export default Home = () => {
         <table>
           <tbody>
             {N5Kanji.map((row, kanjiId) => (
-              <tr>
-                <td
-                  id={kanjiId}
-                  onMouseEnter={() => setHoverKanji(kanjiId)}
-                  onMouseLeave={() => setHoverKanji(null)}
-                >
-                  <p>
-                    <input
-                      type="checkbox"
-                      value={kanjiId}
-                      onClick={(e) => updateKanjiList(e)}
-                    />
-                    {kanjiId}
-                  </p>
-                  {row.Kanji}
-                  {hoverKanji == kanjiId && (
-                    <>
-                      {Object.entries(row).map((data) => (
-                        <label
-                          key={data}
-                          style={{
-                            padding: "8px",
-                            textAlign: "left",
-                            fontWeight: "bold",
-                            fontSize: "1em",
-                          }}
-                        >
-                          {data[0]}:{data[1]}
-                        </label>
-                      ))}
-                    </>
-                  )}
-                </td>
-              </tr>
+              <td
+                id={kanjiId}
+                onMouseEnter={() => setHoverKanji(kanjiId)}
+                onMouseLeave={() => setHoverKanji(null)}
+              >
+                <p>
+                  <input
+                    type="checkbox"
+                    value={kanjiId}
+                    onClick={(e) => updateKanjiList(e)}
+                  />
+                  {kanjiId}
+                </p>
+                {row.Kanji}
+                {hoverKanji == kanjiId && (
+                  <>
+                    {Object.entries(row).map((data) => (
+                      <label
+                        key={data}
+                        style={{
+                          padding: "8px",
+                          textAlign: "left",
+                          fontWeight: "bold",
+                          fontSize: "1em",
+                        }}
+                      >
+                        {data[0]}:{data[1]}
+                      </label>
+                    ))}
+                  </>
+                )}
+              </td>
             ))}
           </tbody>
         </table>
