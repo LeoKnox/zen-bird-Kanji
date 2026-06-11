@@ -46,14 +46,15 @@ export default Home = () => {
                       <label
                         key={data}
                         style={{
-                          position: "absolute",
                           padding: "8px",
                           textAlign: "left",
                           fontWeight: "bold",
                           fontSize: "1em",
                         }}
                       >
-                        {data[0]}:{data[1]}
+                        <p>
+                          {data[0]}:{data[1]}
+                        </p>
                       </label>
                     ))}
                   </>
