@@ -43,19 +43,21 @@ export default Home = () => {
                 {hoverKanji == kanjiId && (
                   <>
                     {Object.entries(row).map((data) => (
-                      <label
-                        key={data}
-                        style={{
-                          padding: "8px",
-                          textAlign: "left",
-                          fontWeight: "bold",
-                          fontSize: "1em",
-                        }}
-                      >
-                        <p>
-                          {data[0]}:{data[1]}
-                        </p>
-                      </label>
+                      <div style={{ position: "absolute" }}>
+                        <label
+                          key={data}
+                          style={{
+                            padding: "8px",
+                            textAlign: "left",
+                            fontWeight: "bold",
+                            fontSize: "1em",
+                          }}
+                        >
+                          <p>
+                            {data[0]}:{data[1]}
+                          </p>
+                        </label>
+                      </div>
                     ))}
                   </>
                 )}
