@@ -44,7 +44,7 @@ export default Home = () => {
                   {hoverKanji && (
                     <>
                       {Object.entries(row).map((data) => (
-                        <td
+                        <label
                           key={data}
                           style={{
                             padding: "8px",
@@ -54,7 +54,7 @@ export default Home = () => {
                           }}
                         >
                           {data[0]}:{data[1]}
-                        </td>
+                        </label>
                       ))}
                     </>
                   )}
