@@ -41,20 +41,23 @@ export default Home = () => {
                     {kanjiId}
                   </p>
                   {row.Kanji}
-                  {hoverKanji && 
-                  {Object.entries(row).map((data) => (
-                  <label
-                    key={data}
-                    style={{
-                      padding: "8px",
-                      textAlign: "left",
-                      fontWeight: "bold",
-                      fontSize: "1em",
-                    }}
-                  >
-                    {data[0]}:{data[1]}
-                  </label>
-                ))}}
+                  {hoverKanji && (
+                    <>
+                      {Object.entries(row).map((data) => (
+                        <td
+                          key={data}
+                          style={{
+                            padding: "8px",
+                            textAlign: "left",
+                            fontWeight: "bold",
+                            fontSize: "1em",
+                          }}
+                        >
+                          {data[0]}:{data[1]}
+                        </td>
+                      ))}
+                    </>
+                  )}
                 </td>
               </tr>
             ))}
