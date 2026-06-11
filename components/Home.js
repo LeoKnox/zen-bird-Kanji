@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export default Home = () => {
   const [kanjiList, setKanjiList] = useState([]);
+  const [hoverKanji, setHoverKanji] = useState(null);
   const updateKanjiList = (e) => {
     e.target.checked
       ? setKanjiList([...kanjiList, e.target.value])
@@ -26,13 +27,21 @@ export default Home = () => {
           <tbody>
             {N5Kanji.map((row, kanjiId) => (
               <tr>
-                <td>
-                  <input
-                    type="checkbox"
-                    value={kanjiId}
-                    onClick={(e) => updateKanjiList(e)}
-                  />
-                  {kanjiId}
+                <td
+                  id={kanjiId}
+                  onMouseEnter={() => setHoverKanji(kanjiId)}
+                  onMouseLeave={() => setHoverKanji(null)}
+                >
+                  <p>
+                    <input
+                      type="checkbox"
+                      value={kanjiId}
+                      onClick={(e) => updateKanjiList(e)}
+                    />
+                    {kanjiId}
+                  </p>
+                  {row.Kanji}
+                  {hoverKanji == { kanjiId } ?? <p>more info</p>}
                 </td>
                 {Object.entries(row).map((data) => (
                   <td
