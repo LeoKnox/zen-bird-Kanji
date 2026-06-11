@@ -41,7 +41,7 @@ export default Home = () => {
                     {kanjiId}
                   </p>
                   {row.Kanji}
-                  {hoverKanji == { kanjiId } ?? <p>more info</p>}
+                  {hoverKanji && <p>more info</p>}
                 </td>
                 {Object.entries(row).map((data) => (
                   <td
