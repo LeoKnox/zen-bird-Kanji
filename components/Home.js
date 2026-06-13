@@ -43,7 +43,7 @@ export default Home = () => {
                 {hoverKanji == kanjiId && (
                   <>
                     {Object.entries(row).map((data) => (
-                      <div style={{ display: "flex" }}>
+                      <div name="info" style={{ display: "flex" }}>
                         <label
                           key={data}
                           style={{
@@ -51,6 +51,7 @@ export default Home = () => {
                             textAlign: "left",
                             fontWeight: "bold",
                             fontSize: "1em",
+                            textAlign: "left"
                           }}
                         >
                           <ul>
