@@ -43,7 +43,7 @@ export default Home = () => {
                 {hoverKanji == kanjiId && (
                   <>
                     {Object.entries(row).map((data) => (
-                      <div style={{ position: "absolute" }}>
+                      <div style={{ position: "static" }}>
                         <label
                           key={data}
                           style={{
