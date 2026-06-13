@@ -9,7 +9,8 @@ body {
 
 td {
   color: darkgreen;
-  overflow: visible;
+  width: 100px;
+  height: 80px;
   border: 10px solid;
   broder-radius: 20px;
   border-image: linear-gradient(
