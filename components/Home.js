@@ -40,11 +40,10 @@ export default Home = () => {
                   {kanjiId}
                 </p>
                 {row.Kanji}
-                </td>
                 {hoverKanji == kanjiId && (
                   <>
                     {Object.entries(row).map((data) => (
-                      <div style={{ position: "static" }}>
+                      <div style={{ display: "flex" }}>
                         <label
                           key={data}
                           style={{
@@ -64,7 +63,7 @@ export default Home = () => {
                     ))}
                   </>
                 )}
-              
+              </td>
             ))}
           </tbody>
         </table>
