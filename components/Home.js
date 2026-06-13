@@ -51,7 +51,7 @@ export default Home = () => {
                             textAlign: "left",
                             fontWeight: "bold",
                             fontSize: "1em",
-                            textAlign: "left"
+                            overflow: "visible",
                           }}
                         >
                           <ul>
