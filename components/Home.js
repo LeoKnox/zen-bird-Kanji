@@ -12,7 +12,7 @@ export default Home = () => {
         );
   };
   const onHover = (props) => {
-    setHoverKanji(props.kanjiId);
+    //setHoverKanji(props.kanjiId);
     return <p>try</p>;
   };
   return (
