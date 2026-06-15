@@ -11,6 +11,9 @@ export default Home = () => {
           kanji.filter((index) => e.target.value !== index)
         );
   };
+  const onHover = (kanjiId) => {
+    return <p>try</p>;
+  };
   return (
     <>
       <h1>Home</h1>
@@ -28,7 +31,7 @@ export default Home = () => {
             {N5Kanji.map((row, kanjiId) => (
               <td
                 id={kanjiId}
-                onMouseEnter={() => setHoverKanji(kanjiId)}
+                onMouseEnter={() => onHover(kanjiId)}
                 onMouseLeave={() => setHoverKanji(null)}
               >
                 <p>
@@ -40,35 +43,35 @@ export default Home = () => {
                   {kanjiId}
                 </p>
                 {row.Kanji}
+                {hoverKanji == kanjiId && (
+                  <>
+                    {Object.entries(row).map((data) => (
+                      <div
+                        name="info"
+                        style={{ overflow: "visible", display: "flex" }}
+                      >
+                        <label
+                          key={data}
+                          style={{
+                            padding: "8px",
+                            textAlign: "left",
+                            fontWeight: "bold",
+                            fontSize: "1em",
+                            overflow: "visible",
+                          }}
+                        >
+                          <ul>
+                            <li>
+                              {data[0]}:{data[1]}
+                            </li>
+                          </ul>
+                        </label>
+                      </div>
+                    ))}
+                  </>
+                )}
               </td>
             ))}
-            {hoverKanji == kanjiId && (
-              <>
-                {Object.entries(row).map((data) => (
-                  <div
-                    name="info"
-                    style={{ overflow: "visible", display: "flex" }}
-                  >
-                    <label
-                      key={data}
-                      style={{
-                        padding: "8px",
-                        textAlign: "left",
-                        fontWeight: "bold",
-                        fontSize: "1em",
-                        overflow: "visible",
-                      }}
-                    >
-                      <ul>
-                        <li>
-                          {data[0]}:{data[1]}
-                        </li>
-                      </ul>
-                    </label>
-                  </div>
-                ))}
-              </>
-            )}
           </tbody>
         </table>
       </div>
