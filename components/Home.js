@@ -25,7 +25,7 @@ export default Home = () => {
             height: "1em",
           }}
         >
-          {kanjiList} {() => onHover(1)}
+          {kanjiList} <onHover />
         </p>
         <table>
           <tbody>
