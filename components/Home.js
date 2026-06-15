@@ -32,7 +32,7 @@ export default Home = () => {
             {N5Kanji.map((row, kanjiId) => (
               <td
                 id={kanjiId}
-                onMouseEnter={() => onHover(kanjiId)}
+                onMouseEnter={() => setHoverKanji(kanjiId)}
                 onMouseLeave={() => setHoverKanji(null)}
               >
                 <p>
@@ -46,29 +46,7 @@ export default Home = () => {
                 {row.Kanji}
                 {hoverKanji == kanjiId && (
                   <>
-                    {Object.entries(row).map((data) => (
-                      <div
-                        name="info"
-                        style={{ overflow: "visible", display: "flex" }}
-                      >
-                        <label
-                          key={data}
-                          style={{
-                            padding: "8px",
-                            textAlign: "left",
-                            fontWeight: "bold",
-                            fontSize: "1em",
-                            overflow: "visible",
-                          }}
-                        >
-                          <ul>
-                            <li>
-                              {data[0]}:{data[1]}
-                            </li>
-                          </ul>
-                        </label>
-                      </div>
-                    ))}
+                    {()=>onHover(kanjiId)}
                   </>
                 )}
               </td>
