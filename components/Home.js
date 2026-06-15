@@ -40,34 +40,37 @@ export default Home = () => {
                   {kanjiId}
                 </p>
                 {row.Kanji}
-                {hoverKanji == kanjiId && (
-                  <>
-                    {Object.entries(row).map((data) => (
-                      <div
-                        name="info"
-                        style={{ overflow: "visible", display: "flex" }}
-                      >
-                        <label
-                          key={data}
-                          style={{
-                            padding: "8px",
-                            textAlign: "left",
-                            fontWeight: "bold",
-                            fontSize: "1em",
-                            overflow: "visible",
-                          }}
-                        >
-                          <ul>
-                            <li>
-                              {data[0]}:{data[1]}
-                            </li>
-                          </ul>
-                        </label>
-                      </div>
-                    ))}
-                  </>
-                )}
+                
               </td>
+              <>
+              {hoverKanji == kanjiId && (
+                <>
+                  {Object.entries(row).map((data) => (
+                    <div
+                      name="info"
+                      style={{ overflow: "visible", display: "flex" }}
+                    >
+                      <label
+                        key={data}
+                        style={{
+                          padding: "8px",
+                          textAlign: "left",
+                          fontWeight: "bold",
+                          fontSize: "1em",
+                          overflow: "visible",
+                        }}
+                      >
+                        <ul>
+                          <li>
+                            {data[0]}:{data[1]}
+                          </li>
+                        </ul>
+                      </label>
+                    </div>
+                  ))}
+                </>
+              )}
+              </>
             ))}
           </tbody>
         </table>
