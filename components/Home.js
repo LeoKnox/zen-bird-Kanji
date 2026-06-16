@@ -25,7 +25,7 @@ export default Home = () => {
             height: "1em",
           }}
         >
-          {!hoverKanji || <OnHover kanjiId={hoverKanji} />}?
+          {!hoverKanji>=0 || <OnHover kanjiId={hoverKanji} />}?
         </p>
         <table>
           <tbody>
