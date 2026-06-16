@@ -44,7 +44,7 @@ export default Home = () => {
                   {kanjiId}
                 </p>
                 {row.Kanji}
-                {hoverKanji == kanjiId && (
+                {hoverKanji !== kanjiId && (
                   <>
                     {Object.entries(row).map((data) => (
                       <div
@@ -72,6 +72,7 @@ export default Home = () => {
                   </>
                 )}
               </td>
+              <>{hoverKanji == kanjiId && OnHover(1)}</>
             ))}
           </tbody>
         </table>
