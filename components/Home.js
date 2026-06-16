@@ -13,7 +13,7 @@ export default Home = () => {
   };
   const OnHover = (props) => {
     //setHoverKanji(props.kanjiId);
-    return <p>try</p>;
+    return <p>red {props.kanjiId}</p>;
   };
   return (
     <>
@@ -25,7 +25,7 @@ export default Home = () => {
             height: "1em",
           }}
         >
-          {hoverKanji ?? <OnHover />}?
+          {hoverKanji ?? <OnHover kanjiId={hoverKanji} />}?
         </p>
         <table>
           <tbody>
