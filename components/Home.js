@@ -11,7 +11,7 @@ export default Home = () => {
           kanji.filter((index) => e.target.value !== index)
         );
   };
-  const onHover = (props) => {
+  const OnHover = (props) => {
     //setHoverKanji(props.kanjiId);
     return <p>try</p>;
   };
@@ -25,7 +25,7 @@ export default Home = () => {
             height: "1em",
           }}
         >
-          {kanjiList} <onHover />?
+          {kanjiList} <OnHover />?
         </p>
         <table>
           <tbody>
