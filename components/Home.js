@@ -44,35 +44,13 @@ export default Home = () => {
                   {kanjiId}
                 </p>
                 {row.Kanji}
-                {hoverKanji !== kanjiId && (
+                {hoverKanji == kanjiId && (
                   <>
-                    {Object.entries(row).map((data) => (
-                      <div
-                        name="info"
-                        style={{ overflow: "visible", display: "flex" }}
-                      >
-                        <label
-                          key={data}
-                          style={{
-                            padding: "8px",
-                            textAlign: "left",
-                            fontWeight: "bold",
-                            fontSize: "1em",
-                            overflow: "visible",
-                          }}
-                        >
-                          <ul>
-                            <li>
-                              {data[0]}:{data[1]}
-                            </li>
-                          </ul>
-                        </label>
-                      </div>
-                    ))}
+                    {Object.entries(row).map((data) => OnHover(1))}
                   </>
                 )}
               </td>
-              <>{hoverKanji == kanjiId && OnHover(1)}</>
+              
             ))}
           </tbody>
         </table>
