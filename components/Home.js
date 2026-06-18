@@ -13,7 +13,12 @@ export default Home = () => {
   };
   const OnHover = (props) => {
     //setHoverKanji(props.kanjiId);
-    return <p>red {props.kanjiId}</p>;
+    return (
+      <>
+        <p>{props.kanjiId}</p>
+        <li>{kanjiList[props.kanjiId].meaning}</li>
+      </>
+    );
   };
   return (
     <>
