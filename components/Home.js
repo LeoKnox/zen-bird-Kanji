@@ -15,8 +15,9 @@ export default Home = () => {
     //setHoverKanji(props.kanjiId);
     return (
       <>
-        <p>{props.kanjiId}</p>
-        <li>{}</li>
+        <p>
+          {props.title}:{props.data}
+        </p>
       </>
     );
   };
@@ -66,7 +67,9 @@ export default Home = () => {
                             overflow: "visible",
                           }}
                         >
-                          {hoverKanji >= 0 && <OnHover kanjiId={hoverKanji} />}
+                          {hoverKanji >= 0 && (
+                            <OnHover title={data[0]} data={data[1]} />
+                          )}
                         </label>
                       </div>
                     ))}
