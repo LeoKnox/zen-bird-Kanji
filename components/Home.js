@@ -31,7 +31,7 @@ export default Home = () => {
             height: "1em",
           }}
         >
-          {hoverKanji >= 0 && <OnHover kanjiId={hoverKanji} />}?
+          {hoverKanji >= 0 && <OnHover title={hoverKanji} />}?
         </p>
         <table>
           <tbody>
@@ -50,31 +50,33 @@ export default Home = () => {
                   {kanjiId}
                 </p>
                 {row.Kanji}
-                {hoverKanji == kanjiId && (
-                  <>
-                    {Object.entries(row).map((data) => (
-                      <div
-                        name="info"
-                        style={{ overflow: "visible", display: "flex" }}
-                      >
-                        <label
-                          key={data}
-                          style={{
-                            padding: "8px",
-                            textAlign: "left",
-                            fontWeight: "bold",
-                            fontSize: "1em",
-                            overflow: "visible",
-                          }}
+                <div>
+                  {hoverKanji == kanjiId && (
+                    <>
+                      {Object.entries(row).map((data) => (
+                        <div
+                          name="info"
+                          style={{ overflow: "visible", display: "flex" }}
                         >
-                          {hoverKanji >= 0 && (
-                            <OnHover title={data[0]} data={data[1]} />
-                          )}
-                        </label>
-                      </div>
-                    ))}
-                  </>
-                )}
+                          <label
+                            key={data}
+                            style={{
+                              padding: "8px",
+                              textAlign: "left",
+                              fontWeight: "bold",
+                              fontSize: "1em",
+                              overflow: "visible",
+                            }}
+                          >
+                            {hoverKanji >= 0 && (
+                              <OnHover title={data[0]} data={data[1]} />
+                            )}
+                          </label>
+                        </div>
+                      ))}
+                    </>
+                  )}
+                </div>
               </td>
             ))}
           </tbody>
