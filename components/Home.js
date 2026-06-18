@@ -16,7 +16,7 @@ export default Home = () => {
     return (
       <>
         <p>{props.kanjiId}</p>
-        <li>{kanjiList[props.kanjiId].meaning}</li>
+        <li>{}</li>
       </>
     );
   };
@@ -66,11 +66,7 @@ export default Home = () => {
                             overflow: "visible",
                           }}
                         >
-                          <ul>
-                            <li>
-                              {data[0]}:{data[1]}
-                            </li>
-                          </ul>
+                          {hoverKanji >= 0 && <OnHover kanjiId={hoverKanji} />}
                         </label>
                       </div>
                     ))}
