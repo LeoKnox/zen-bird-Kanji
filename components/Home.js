@@ -15,7 +15,11 @@ export default Home = () => {
     //setHoverKanji(props.kanjiId);
     return (
       <>
-        <p>
+        <p
+          style={{
+            zindex: 10,
+          }}
+        >
           {props.title}:{props.data}
         </p>
       </>
@@ -55,7 +59,6 @@ export default Home = () => {
                     position: "absolute",
                     display: "inline-block",
                     verticalAlign: "top",
-                    zindex: 100,
                   }}
                 >
                   {hoverKanji == kanjiId && (
