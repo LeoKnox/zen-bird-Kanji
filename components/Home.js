@@ -55,7 +55,7 @@ export default Home = () => {
                     position: "absolute",
                     display: "inline-block",
                     verticalAlign: "top",
-                    zindex: "10",
+                    zindex: 100,
                   }}
                 >
                   {hoverKanji == kanjiId && (
