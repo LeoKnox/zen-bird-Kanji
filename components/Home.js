@@ -50,7 +50,7 @@ export default Home = () => {
                   {kanjiId}
                 </p>
                 {row.Kanji}
-                <div style={{ position: "absolute",verticalAlign: "top" }}>
+                <div style={{ position: "absolute", display: "inline-block", verticalAlign: "top" }}>
                   {hoverKanji == kanjiId && (
                     <>
                       {Object.entries(row).map((data) => (
@@ -85,4 +85,3 @@ export default Home = () => {
     </>
   );
 };
-
