@@ -17,8 +17,6 @@ export default Home = () => {
       <div
         style={{
           zindex: 10,
-          backgroundColor: "gray",
-          opacity: "80%",
         }}
       >
         <p>
@@ -61,6 +59,8 @@ export default Home = () => {
                     position: "absolute",
                     display: "inline-block",
                     verticalAlign: "top",
+                    backgroundColor: "gray",
+                    opacity: "80%",
                   }}
                 >
                   {hoverKanji == kanjiId && (
