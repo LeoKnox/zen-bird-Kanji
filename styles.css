@@ -7,7 +7,7 @@ body {
   text-align: center;
 }
 
-tr {
+.kanjiRow {
   display: flex;
   flex-wrap: wrap;
 }
