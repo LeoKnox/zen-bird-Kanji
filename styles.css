@@ -7,8 +7,14 @@ body {
   text-align: center;
 }
 
+tr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 td {
   color: darkgreen;
+  flex: 0 0 0;
   width: 100px;
   height: 80px;
   border: 10px solid;
