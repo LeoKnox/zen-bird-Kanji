@@ -40,6 +40,7 @@ export default Home = () => {
         <div className="kanjiRow">
           {N5Kanji.map((row, kanjiId) => (
             <div
+              className="kanjiColumn"
               id={kanjiId}
               onMouseEnter={() => setHoverKanji(kanjiId)}
               onMouseLeave={() => setHoverKanji(null)}
