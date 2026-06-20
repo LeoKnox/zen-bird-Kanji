@@ -12,7 +12,7 @@ body {
   flex-wrap: wrap;
 }
 
-td {
+.kanjiColumn {
   color: darkgreen;
   flex: 0 0 0;
   width: 100px;
