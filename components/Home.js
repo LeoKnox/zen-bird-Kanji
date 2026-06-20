@@ -60,6 +60,7 @@ export default Home = () => {
                     display: "inline-block",
                     verticalAlign: "top",
                     top: "5em",
+                    left: "8em",
                     backgroundColor: "gray",
                     opacity: "80%",
                     Padding: "10px",
