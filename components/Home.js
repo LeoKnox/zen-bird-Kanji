@@ -19,9 +19,9 @@ export default Home = () => {
           zindex: 10,
         }}
       >
-        <p>
+        <label>
           {props.title}:{props.data}
-        </p>
+        </label>
       </div>
     );
   };
@@ -59,6 +59,7 @@ export default Home = () => {
                     position: "absolute",
                     display: "inline-block",
                     verticalAlign: "top",
+                    top: "5em",
                     backgroundColor: "gray",
                     opacity: "80%",
                     Padding: "10px",
