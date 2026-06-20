@@ -14,17 +14,17 @@ export default Home = () => {
   const OnHover = (props) => {
     //setHoverKanji(props.kanjiId);
     return (
-      <>
-        <p
-          style={{
-            zindex: 10,
-            backgroundColor: "gray",
-            opacity: "80%",
-          }}
-        >
+      <div
+        style={{
+          zindex: 10,
+          backgroundColor: "gray",
+          opacity: "80%",
+        }}
+      >
+        <p>
           {props.title}:{props.data}
         </p>
-      </>
+      </div>
     );
   };
   return (
