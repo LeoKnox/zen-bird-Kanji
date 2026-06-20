@@ -61,6 +61,8 @@ export default Home = () => {
                     verticalAlign: "top",
                     backgroundColor: "gray",
                     opacity: "80%",
+                    Padding: "10px",
+                    broderRadius: "10px",
                   }}
                 >
                   {hoverKanji == kanjiId && (
