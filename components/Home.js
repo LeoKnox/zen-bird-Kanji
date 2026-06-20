@@ -18,6 +18,7 @@ export default Home = () => {
         <p
           style={{
             zindex: 10,
+            backgroundColor: "gray",
           }}
         >
           {props.title}:{props.data}
