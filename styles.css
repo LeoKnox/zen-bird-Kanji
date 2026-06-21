@@ -15,7 +15,7 @@ body {
 .kanjiColumn {
   color: darkgreen;
   flex: 1 1 1;
-  width: 100px;
+  width: 25%;
   height: 80px;
   border: 10px solid;
   broder-radius: 20px;
