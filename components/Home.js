@@ -12,11 +12,11 @@ export default Home = () => {
         );
   };
   const OnHover = (props) => {
-    //setHoverKanji(props.kanjiId);
     return (
       <div
         style={{
           zindex: 10,
+          padding: "10px",
         }}
       >
         <label>
@@ -35,7 +35,7 @@ export default Home = () => {
             height: "1em",
           }}
         >
-          {hoverKanji >= 0 && <OnHover title={hoverKanji} />}?
+          {hoverKanji >= 0 && <OnHover title={hoverKanji} />}
         </p>
         <div className="kanjiRow">
           {N5Kanji.map((row, kanjiId) => (
