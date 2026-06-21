@@ -1,205 +1,42 @@
-import { N5Kanji } from "./N5Kanji.js";
-import { useState } from "react";
+body {
+  background-color: tan;
+}
 
-export default Home = () => {
-  const [kanjiList, setKanjiList] = useState([]);
-  const [hoverKanji, setHoverKanji] = useState(null);
-  const updateKanjiList = (e) => {
-    e.target.checked
-      ? setKanjiList([...kanjiList, e.target.value])
-      : setKanjiList((kanji) =>
-          kanji.filter((index) => e.target.value !== index)import { N5Kanji } from "./N5Kanji.js";
-import { useState } from "react";
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
 
-export default Home = () => {
-  const [kanjiList, setKanjiList] = useState([]);
-  const [hoverKanji, setHoverKanji] = useState(null);
-  const updateKanjiList = (e) => {
-    e.target.checked
-      ? setKanjiList([...kanjiList, e.target.value])
-      : setKanjiList((kanji) =>
-          kanji.filter((index) => e.target.value !== index)
-        );
-  };
-  const OnHover = (props) => {
-    return (
-      <div
-        style={{
-          zindex: 10,
-          padding: "10px",
-        }}
-      >
-        <label>
-          {props.title}:{props.data}
-        </label>
-      </div>
-    );
-  };
-  return (
-    <>
-      <h1>Home</h1>
-      <div>
-        <h2>家</h2>
-        <p
-          style={{
-            height: "1em",
-          }}
-        >
-          {hoverKanji >= 0 && <OnHover title={hoverKanji} />}
-        </p>
-        <div className="kanjiRow">
-          {N5Kanji.map((row, kanjiId) => (
-            <div
-              className="kanjiColumn"
-              id={kanjiId}
-              onMouseEnter={() => setHoverKanji(kanjiId)}
-              onMouseLeave={() => setHoverKanji(null)}
-            >
-              <p>
-                <input
-                  type="checkbox"
-                  value={kanjiId}
-                  onClick={(e) => updateKanjiList(e)}
-                />
-                {kanjiId}
-              </p>
-              {row.Kanji}
-              <div
-                style={{
-                  position: "absolute",
-                  display: "flex",
-                  verticalAlign: "top",
-                  top: "5em",
-                  left: "8em",
-                  backgroundColor: "gray",
-                  opacity: "80%",
-                  Padding: "10px",
-                  broderRadius: "10px",
-                }}
-              >
-                {hoverKanji == kanjiId && (
-                  <>
-                    {Object.entries(row).map((data) => (
-                      <div
-                        name="info"
-                        style={{ overflow: "visible", display: "flex" }}
-                      >
-                        <label
-                          key={data}
-                          style={{
-                            padding: "8px",
-                            textAlign: "left",
-                            fontWeight: "bold",
-                            fontSize: "1em",
-                            overflow: "visible",
-                          }}
-                        >
-                          {hoverKanji >= 0 && (
-                            <OnHover title={data[0]} data={data[1]} />
-                          )}
-                        </label>
-                      </div>
-                    ))}
-                  </>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
-  );
-};
+.kanjiRow {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-        );
-  };
-  const OnHover = (props) => {
-    //setHoverKanji(props.kanjiId);
-    return (
-      <div
-        style={{
-          zindex: 10,
-          padding: "10px",
-        }}
-      >
-        <label>
-          {props.title}:{props.data}
-        </label>
-      </div>
-    );
-  };
-  return (
-    <>
-      <h1>Home</h1>
-      <div>
-        <h2>家</h2>
-        <p
-          style={{
-            height: "1em",
-          }}
-        >
-          {hoverKanji >= 0 && <OnHover title={hoverKanji} />}?
-        </p>
-        <div className="kanjiRow">
-          {N5Kanji.map((row, kanjiId) => (
-            <div
-              className="kanjiColumn"
-              id={kanjiId}
-              onMouseEnter={() => setHoverKanji(kanjiId)}
-              onMouseLeave={() => setHoverKanji(null)}
-            >
-              <p>
-                <input
-                  type="checkbox"
-                  value={kanjiId}
-                  onClick={(e) => updateKanjiList(e)}
-                />
-                {kanjiId}
-              </p>
-              {row.Kanji}
-              <div
-                style={{
-                  position: "absolute",
-                  display: "flex",
-                  verticalAlign: "top",
-                  top: "5em",
-                  left: "8em",
-                  backgroundColor: "gray",
-                  opacity: "80%",
-                  Padding: "10px",
-                  broderRadius: "10px",
-                }}
-              >
-                {hoverKanji == kanjiId && (
-                  <>
-                    {Object.entries(row).map((data) => (
-                      <div
-                        name="info"
-                        style={{ overflow: "visible", display: "flex" }}
-                      >
-                        <label
-                          key={data}
-                          style={{
-                            padding: "8px",
-                            textAlign: "left",
-                            fontWeight: "bold",
-                            fontSize: "1em",
-                            overflow: "visible",
-                          }}
-                        >
-                          {hoverKanji >= 0 && (
-                            <OnHover title={data[0]} data={data[1]} />
-                          )}
-                        </label>
-                      </div>
-                    ))}
-                  </>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
-  );
-};
+.kanjiColumn {
+  color: darkgreen;
+  flex: 1 1 1;
+  width: 100px;
+  height: 80px;
+  border: 10px solid;
+  broder-radius: 20px;
+  border-image: linear-gradient(
+      to bottom,
+      #506b3c 0%,
+      #88a564 50%,
+      #506b3c 100%
+    )
+    1;
+}
+
+.kanjiColumn input[type="checkbox"] {
+  appearance: none;
+  margin-bottom: 0;
+  width: 1em;
+  height: 1em;
+  background: brown;
+}
+
+.kanjiColumn input[type="checkbox"]:checked {
+  appearance: revert;
+  accent-color: gold;
+}
