@@ -96,7 +96,7 @@ export default Home = () => {
             </div>
           ))}
           <div>
-            <label>Kanji</label>
+            <p>Kanji</p>
             <label
               style={{ writingMode: "vertical-rl", textOrientation: "upright" }}
             >
