@@ -95,7 +95,7 @@ export default Home = () => {
               </div>
             </div>
           ))}
-          <div>{kanjiList}</div>
+          <div style={{ verticalAlign: "true" }}>{kanjiList}</div>
         </div>
       </div>
     </>
