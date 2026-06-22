@@ -95,6 +95,7 @@ export default Home = () => {
               </div>
             </div>
           ))}
+          <div>{kanjiList}</div>
         </div>
       </div>
     </>
