@@ -95,7 +95,11 @@ export default Home = () => {
               </div>
             </div>
           ))}
-          <div style={{ verticalAlign: "true" }}>{kanjiList}</div>
+          <div
+            style={{ writingMode: "vertical-rl", textOrientation: "upright" }}
+          >
+            {kanjiList}
+          </div>
         </div>
       </div>
     </>
