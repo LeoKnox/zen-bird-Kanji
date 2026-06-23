@@ -99,8 +99,8 @@ export default Home = () => {
             style={{
               top: "5%",
               justifyContent: "verticalAlign",
-              display: "flex",
-              alignItems: "flex-start",
+              display: "grid",
+  alignContent: "start",
             }}
           >
             <p>Kanji</p>
