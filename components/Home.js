@@ -99,11 +99,15 @@ export default Home = () => {
             style={{
               display: "grid",
               alignContent: "start",
+              marginTop: 0,
             }}
           >
             <p>Kanji</p>
             <label
-              style={{ writingMode: "vertical-rl", textOrientation: "upright" }}
+              style={{
+                writingMode: "vertical-rl",
+                textOrientation: "upright",
+              }}
             >
               {kanjiList}
             </label>
