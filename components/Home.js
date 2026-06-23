@@ -65,6 +65,7 @@ export default Home = () => {
                   opacity: "80%",
                   Padding: "10px",
                   broderRadius: "10px",
+                  alignItems: "flex-start",
                 }}
               >
                 {hoverKanji == kanjiId && (
@@ -99,7 +100,6 @@ export default Home = () => {
             style={{
               display: "grid",
               alignContent: "start",
-              marginTop: 0,
             }}
           >
             <p>Kanji</p>
