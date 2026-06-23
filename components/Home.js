@@ -97,10 +97,8 @@ export default Home = () => {
           ))}
           <div
             style={{
-              top: "5%",
-              justifyContent: "verticalAlign",
               display: "grid",
-  alignContent: "start",
+              alignContent: "start",
             }}
           >
             <p>Kanji</p>
