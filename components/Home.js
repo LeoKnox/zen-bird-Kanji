@@ -96,8 +96,7 @@ export default Home = () => {
                 )}
               </div>
             </div>
-          ))}
-          <div
+            <div
             className="sideBar"
             style={{
               display: "grid",
@@ -114,6 +113,8 @@ export default Home = () => {
               {kanjiList}
             </label>
           </div>
+          ))}
+          
         </div>
       </div>
     </>
