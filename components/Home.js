@@ -78,7 +78,7 @@ export default Home = () => {
                         <label
                           key={data}
                           style={{
-                            display: "inline",
+                            display: "block",
                             padding: "8px",
                             textAlign: "left",
                             fontWeight: "bold",
