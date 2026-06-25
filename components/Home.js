@@ -96,25 +96,24 @@ export default Home = () => {
                 )}
               </div>
             </div>
-            <div
-            className="sideBar"
+          ))}
+        </div>
+        <div
+          className="sideBar"
+          style={{
+            display: "grid",
+            alignContent: "start",
+          }}
+        >
+          <p>Kanji</p>
+          <label
             style={{
-              display: "grid",
-              alignContent: "start",
+              writingMode: "vertical-rl",
+              textOrientation: "upright",
             }}
           >
-            <p>Kanji</p>
-            <label
-              style={{
-                writingMode: "vertical-rl",
-                textOrientation: "upright",
-              }}
-            >
-              {kanjiList}
-            </label>
-          </div>
-          ))}
-          
+            {kanjiList}
+          </label>
         </div>
       </div>
     </>
