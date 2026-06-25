@@ -97,6 +97,7 @@ export default Home = () => {
             </div>
           ))}
           <div
+            className="sideBar"
             style={{
               display: "grid",
               alignContent: "start",
