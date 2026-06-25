@@ -104,6 +104,7 @@ export default Home = () => {
             style={{
               display: "grid",
               alignContent: "start",
+              width: "10%",
             }}
           >
             <p>Kanji</p>
