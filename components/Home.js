@@ -37,7 +37,10 @@ export default Home = () => {
         >
           {hoverKanji >= 0 && <OnHover title={hoverKanji} />}
         </p>
-        <div className="kanjiRow">
+        <div
+          className="kanjiRow"
+          style={{ overflow: "visible", display: "flex" }}
+        >
           {N5Kanji.map((row, kanjiId) => (
             <div
               className="kanjiColumn"
