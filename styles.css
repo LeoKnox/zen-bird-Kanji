@@ -10,12 +10,11 @@ body {
 .kanjiRow {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
 }
 
 .kanjiColumn {
   color: darkgreen;
-  flex: 1 1 1;
+  flex: 20% 20% 1;
   width: 25%;
   height: 80px;
   border: 10px solid;
