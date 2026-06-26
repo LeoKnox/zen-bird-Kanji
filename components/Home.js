@@ -121,7 +121,7 @@ export default Home = () => {
           </div>
         </div>
       </div>
-      <KanjiHover />
+      <KanjiHover row={[1, 2]} />
     </>
   );
 };
