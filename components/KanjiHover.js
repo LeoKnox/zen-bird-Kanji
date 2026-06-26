@@ -1,4 +1,4 @@
-export default KanjiHover = () => {
+export default KanjiHover = (row) => {
   return (
     <>
       {Object.entries(row).map((data) => (
@@ -14,7 +14,7 @@ export default KanjiHover = () => {
               overflow: "visible",
             }}
           >
-            {hoverKanji >= 0 && <OnHover title={data[0]} data={data[1]} />}
+            {row >= 0 && <OnHover title={data[0]} data={data[1]} />}
           </label>
         </div>
       ))}
