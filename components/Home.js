@@ -65,7 +65,8 @@ export default Home = () => {
                     display: "flex",
                     verticalAlign: "top",
                     top: "5em",
-                    left: "8em",
+                    left: "7em",
+                    right:".2em",
                     backgroundColor: "gray",
                     opacity: "80%",
 
