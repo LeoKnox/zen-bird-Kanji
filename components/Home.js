@@ -68,7 +68,7 @@ export default Home = () => {
                     left: "8em",
                     backgroundColor: "gray",
                     opacity: "80%",
-                    Padding: "10px",
+
                     broderRadius: "10px",
                     alignItems: "flex-start",
                   }}
