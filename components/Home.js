@@ -1,5 +1,6 @@
 import { N5Kanji } from "./N5Kanji.js";
 import { useState } from "react";
+import KanjiHover from "./KanjiHover.js";
 
 export default Home = () => {
   const [kanjiList, setKanjiList] = useState([]);
@@ -120,6 +121,7 @@ export default Home = () => {
           </div>
         </div>
       </div>
+      <KanjiHover />
     </>
   );
 };
