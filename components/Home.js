@@ -72,7 +72,7 @@ export default Home = () => {
                     borderRadius: "10px",
                     display: "flex",
                     alignItems: "flex-start",
-
+                    border: "2px solid tan",
                     whiteSpace: "nowrap",
                     width: "max-content",
                     minWidth: "150px",
