@@ -72,8 +72,10 @@ export default Home = () => {
                     display: "flex",
                     alignItems: "flex-start",
                     opacity: "1",
-                    padding: "10px",
+
                     whiteSpace: "nowrap",
+                    width: "max-content",  
+    minWidth: "150px",
                     transition: "opacity 0.3s ease-in-out",
                   }}
                 >
