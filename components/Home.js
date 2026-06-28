@@ -74,8 +74,8 @@ export default Home = () => {
                     opacity: "1",
 
                     whiteSpace: "nowrap",
-                    width: "max-content",  
-    minWidth: "150px",
+                    width: "max-content",
+                    minWidth: "150px",
                     transition: "opacity 0.3s ease-in-out",
                   }}
                 >
