@@ -67,9 +67,7 @@ export default Home = () => {
                     postion: "relative",
                     display: "flex",
                     verticalAlign: "top",
-                    top: "5em",
-                    left: "7em",
-                    right: ".2em",
+                    
                     backgroundColor: "gray",
 
                     broderRadius: "10px",
