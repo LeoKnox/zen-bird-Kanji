@@ -76,7 +76,13 @@ export default Home = () => {
                     whiteSpace: "nowrap",
                     width: "max-content",
                     minWidth: "150px",
-                    transition: "opacity 0.3s ease-in-out",
+                    opacity: hoverKanji === kanjiId ? 1 : 0,
+                    visibility: hoverKanji === kanjiId ? "visible" : "hidden",
+                    pointerEvents: "none",
+
+                    transition:
+                      "opacity 0.3s ease-in-out, visibility 0.3s ease-in-out",
+                    transitionDelay: hoverKanji === kanjiId ? "0.4s" : "0s",
                   }}
                 >
                   {hoverKanji == kanjiId && (
