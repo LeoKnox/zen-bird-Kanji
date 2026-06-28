@@ -67,11 +67,11 @@ export default Home = () => {
                     position: "relative",
                     flexDirection: "column",
                     verticalAlign: "top",
-                    backgroundColor: "#2B1E17",
+                    backgroundColor: "#802b00",
+                    color: "tan",
                     borderRadius: "10px",
                     display: "flex",
                     alignItems: "flex-start",
-                    opacity: "1",
 
                     whiteSpace: "nowrap",
                     width: "max-content",
