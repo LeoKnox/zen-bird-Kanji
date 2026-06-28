@@ -64,7 +64,7 @@ export default Home = () => {
                 {row.Kanji}
                 <div
                   style={{
-                    position: "absolute",
+                    postion: "relative",
                     display: "flex",
                     verticalAlign: "top",
                     top: "5em",
@@ -84,7 +84,7 @@ export default Home = () => {
                           <label
                             key={data}
                             style={{
-                              position: "relative",
+                             
                               padding: "8px",
                               textAlign: "left",
                               fontWeight: "bold",
