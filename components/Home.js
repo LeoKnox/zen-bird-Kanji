@@ -65,7 +65,7 @@ export default Home = () => {
                 <div
                   style={{
                     position: "relative",
-                    display: "flex",
+                    flexDirection: "column",
                     verticalAlign: "top",
                     backgroundColor: "gray",
                     broderRadius: "10px",
