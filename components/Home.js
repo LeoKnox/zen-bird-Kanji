@@ -70,7 +70,8 @@ export default Home = () => {
                     backgroundColor: "gray",
                     broderRadius: "10px",
                     alignItems: "flex-start",
-                    opacity:"100%",
+                    opacity: "1",
+                    transition: "opacity 0.3s ease-in-out",
                   }}
                 >
                   {hoverKanji == kanjiId && (
