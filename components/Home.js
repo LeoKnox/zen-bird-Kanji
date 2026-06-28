@@ -68,10 +68,12 @@ export default Home = () => {
                     flexDirection: "column",
                     verticalAlign: "top",
                     backgroundColor: "gray",
-                    broderRadius: "10px",
+                    borderRadius: "10px",
+                    display: "flex",
                     alignItems: "flex-start",
                     opacity: "1",
                     padding: "10px",
+                    whiteSpace: "nowrap",
                     transition: "opacity 0.3s ease-in-out",
                   }}
                 >
@@ -82,6 +84,7 @@ export default Home = () => {
                           <label
                             key={data}
                             style={{
+                              display: "block",
                               padding: "8px",
                               textAlign: "left",
                               fontWeight: "bold",
