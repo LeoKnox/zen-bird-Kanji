@@ -71,6 +71,7 @@ export default Home = () => {
                     broderRadius: "10px",
                     alignItems: "flex-start",
                     opacity: "1",
+                    padding: "10px",
                     transition: "opacity 0.3s ease-in-out",
                   }}
                 >
