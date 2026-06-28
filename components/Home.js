@@ -38,7 +38,10 @@ export default Home = () => {
         >
           {hoverKanji >= 0 && <OnHover title={hoverKanji} />}
         </p>
-        <div className="kanjiWrapper" style={{ color: "green", fontWeight:"bold", display: "flex" }}>
+        <div
+          className="kanjiWrapper"
+          style={{ color: "green", fontWeight: "bold", display: "flex" }}
+        >
           <div
             className="kanjiRow"
             style={{ overflow: "visible", display: "flex" }}
@@ -81,7 +84,7 @@ export default Home = () => {
                           <label
                             key={data}
                             style={{
-                              display: "block",
+                              position: "relative",
                               padding: "8px",
                               textAlign: "left",
                               fontWeight: "bold",
