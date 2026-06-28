@@ -38,7 +38,7 @@ export default Home = () => {
         >
           {hoverKanji >= 0 && <OnHover title={hoverKanji} />}
         </p>
-        <div className="kanjiWrapper" style={{ display: "flex" }}>
+        <div className="kanjiWrapper" style={{ color: "green", fontWeight:"bold", display: "flex" }}>
           <div
             className="kanjiRow"
             style={{ overflow: "visible", display: "flex" }}
@@ -66,7 +66,7 @@ export default Home = () => {
                     verticalAlign: "top",
                     top: "5em",
                     left: "7em",
-                    right:".2em",
+                    right: ".2em",
                     backgroundColor: "gray",
                     opacity: "80%",
 
