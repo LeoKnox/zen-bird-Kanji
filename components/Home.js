@@ -71,7 +71,6 @@ export default Home = () => {
                     left: "7em",
                     right: ".2em",
                     backgroundColor: "gray",
-                    opacity: "80%",
 
                     broderRadius: "10px",
                     alignItems: "flex-start",
@@ -84,7 +83,6 @@ export default Home = () => {
                           <label
                             key={data}
                             style={{
-                             
                               padding: "8px",
                               textAlign: "left",
                               fontWeight: "bold",
