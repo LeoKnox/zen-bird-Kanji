@@ -67,11 +67,10 @@ export default Home = () => {
                     postion: "relative",
                     display: "flex",
                     verticalAlign: "top",
-                    
                     backgroundColor: "gray",
-
                     broderRadius: "10px",
                     alignItems: "flex-start",
+                    opacity:"100%",
                   }}
                 >
                   {hoverKanji == kanjiId && (
