@@ -67,7 +67,7 @@ export default Home = () => {
                     position: "relative",
                     flexDirection: "column",
                     verticalAlign: "top",
-                    backgroundColor: "gray",
+                    backgroundColor: "#2B1E17",
                     borderRadius: "10px",
                     display: "flex",
                     alignItems: "flex-start",
