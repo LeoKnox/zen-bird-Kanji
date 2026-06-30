@@ -98,7 +98,6 @@ export default Home = () => {
                               fontWeight: "bold",
                               fontSize: "1em",
                               overflow: "visible",
-                              backgroundColor: "#ccff99",
                             }}
                           >
                             {hoverKanji >= 0 && (
@@ -126,6 +125,7 @@ export default Home = () => {
               style={{
                 writingMode: "vertical-rl",
                 textOrientation: "upright",
+                backgroundColor: "#ccff99",
               }}
             >
               {kanjiList}
