@@ -98,6 +98,7 @@ export default Home = () => {
                               fontWeight: "bold",
                               fontSize: "1em",
                               overflow: "visible",
+                              backgroundColor: "#ccff99",
                             }}
                           >
                             {hoverKanji >= 0 && (
