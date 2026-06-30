@@ -121,6 +121,7 @@ export default Home = () => {
               backgroundColor: "darkgreen",
               minWidth: "auto",
               padding: "10px",
+              borderRadius: "10px",
             }}
           >
             <p>Kanji</p>
