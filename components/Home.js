@@ -129,6 +129,7 @@ export default Home = () => {
                 writingMode: "vertical-rl",
                 textOrientation: "upright",
                 backgroundColor: "#ccff99",
+                padding: "5px",
               }}
             >
               {kanjiList}
