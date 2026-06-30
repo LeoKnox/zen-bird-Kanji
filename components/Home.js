@@ -118,7 +118,8 @@ export default Home = () => {
               display: "grid",
               alignContent: "start",
               flex: "0 0 0 1",
-              backgroundColor: "darkgreen",
+              backgroundColor: "#506b3c",
+              color: "#88a564",
               minWidth: "auto",
               padding: "10px",
             }}
@@ -129,7 +130,7 @@ export default Home = () => {
                 writingMode: "vertical-rl",
                 textOrientation: "upright",
                 backgroundColor: "#ccff99",
-                padding: "5px",
+                padding: "5px", // move to css file to clear empty
                 borderRadius: "1em",
               }}
             >
