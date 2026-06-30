@@ -118,6 +118,7 @@ export default Home = () => {
               display: "grid",
               alignContent: "start",
               flex: "0 0 0 1",
+              backgroundCOlor: "green",
             }}
           >
             <p>Kanji</p>
