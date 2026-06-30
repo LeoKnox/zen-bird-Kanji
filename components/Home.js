@@ -121,7 +121,6 @@ export default Home = () => {
               backgroundColor: "darkgreen",
               minWidth: "auto",
               padding: "10px",
-              borderRadius: "10px",
             }}
           >
             <p>Kanji</p>
@@ -131,6 +130,7 @@ export default Home = () => {
                 textOrientation: "upright",
                 backgroundColor: "#ccff99",
                 padding: "5px",
+                borderRadius: "1em",
               }}
             >
               {kanjiList}
