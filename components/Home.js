@@ -120,6 +120,7 @@ export default Home = () => {
               flex: "0 0 0 1",
               backgroundColor: "darkgreen",
               minWidth: "auto",
+              padding: "10px",
             }}
           >
             <p>Kanji</p>
