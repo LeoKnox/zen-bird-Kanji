@@ -141,8 +141,8 @@ export default Home = () => {
             <div
               style={{ position: "absolute", bottom: 0, left: 0, with: "100%" }}
             >
-              <button>practice</button>
-              <button>quiz</button>
+              <button className="kanjiButton">practice</button>
+              <button className="kanjiButton">quiz</button>
             </div>
           </div>
         </div>
