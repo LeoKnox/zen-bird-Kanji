@@ -1,6 +1,7 @@
 import { N5Kanji } from "./N5Kanji.js";
 import { useState } from "react";
 import KanjiHover from "./KanjiHover.js";
+import SideBar from "./SideBar.js";
 
 export default Home = () => {
   const [kanjiList, setKanjiList] = useState([]);
@@ -112,39 +113,7 @@ export default Home = () => {
               </div>
             ))}
           </div>
-          <div
-            className="sideBar"
-            style={{
-              display: "grid",
-              alignContent: "start",
-              flex: "0 0 0 1",
-              backgroundColor: "#506b3c",
-              color: "#88a564",
-              minWidth: "auto",
-              padding: "10px",
-              minHeight: "60vh",
-              position: "relative",
-            }}
-          >
-            <p>Kanji</p>
-            <label
-              style={{
-                writingMode: "vertical-rl",
-                textOrientation: "upright",
-                backgroundColor: "#ccff99",
-                padding: "5px", // move to css file to clear empty
-                borderRadius: "1em",
-              }}
-            >
-              {kanjiList}
-            </label>
-            <div
-              style={{ position: "absolute", bottom: 0, left: 0, with: "100%" }}
-            >
-              <button className="kanjiButton">practice</button>
-              <button className="kanjiButton">quiz</button>
-            </div>
-          </div>
+          <SideBar kanjiList={kanjiList} />
         </div>
       </div>
     </>
