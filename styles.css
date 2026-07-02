@@ -7,6 +7,11 @@ body {
   text-align: center;
 }
 
+.kanjiButton {
+  background-color: brown;
+  color: gold;
+}
+
 .kanjiRow {
   display: flex;
   flex-wrap: wrap;
