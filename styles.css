@@ -9,7 +9,11 @@ body {
 
 .kanjiButton {
   background-color: brown;
+  border-radius: 5px;
   color: gold;
+  border: 1px solid gold;
+  padding: 0.3em;
+  text-decoration: none;
 }
 
 .kanjiRow {
