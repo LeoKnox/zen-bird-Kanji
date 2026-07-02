@@ -136,8 +136,12 @@ export default Home = () => {
             >
               {kanjiList}
             </label>
-            <button>practice</button>
-            <button>quiz</button>
+            <div
+              style={{ position: "absolute", bottom: 0, left: 0, with: "100%" }}
+            >
+              <button>practice</button>
+              <button>quiz</button>
+            </div>
           </div>
         </div>
       </div>
