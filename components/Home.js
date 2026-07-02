@@ -122,7 +122,7 @@ export default Home = () => {
               color: "#88a564",
               minWidth: "auto",
               padding: "10px",
-              minHeight: "80%",
+              minHeight: "60vh",
               position: "relative",
             }}
           >
