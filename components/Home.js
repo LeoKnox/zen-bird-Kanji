@@ -136,6 +136,8 @@ export default Home = () => {
             >
               {kanjiList}
             </label>
+            <button>practice</button>
+            <button>quiz</button>
           </div>
         </div>
       </div>
