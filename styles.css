@@ -26,6 +26,7 @@ body {
   color: darkgreen;
   background-color: #ccff99;
   flex: 20% 20% 1;
+  box-sizing: border-box;
   width: 25%;
   height: 80px;
   border: 10px solid;
