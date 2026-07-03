@@ -28,7 +28,7 @@ body {
   flex: 0 0 33%;
   box-sizing: border-box;
   width: 25%;
-  height: auto;
+  height: 20vh;
   border: 10px solid;
   broder-radius: 20px;
   border-image: linear-gradient(
