@@ -12,6 +12,7 @@ export default SideBar = ({ kanjiList }) => {
         padding: "10px",
         minHeight: "60vh",
         position: "relative",
+        height: "auto",
       }}
     >
       <p>Kanji</p>
