@@ -27,6 +27,7 @@ body {
   background-color: #ccff99;
   flex: 0 0 33%;
   box-sizing: border-box;
+  padding: 15px;
   width: 25%;
   height: 80px;
   border: 10px solid;
