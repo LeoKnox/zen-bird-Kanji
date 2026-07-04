@@ -1,8 +1,8 @@
 import { useState } from "react";
 import SideBar from "./SideBar.js";
-import { N5Kanji } from "./N5Kanji.js";
 
-export default KanjiSelect = () => {
+
+export default KanjiSelect = ({N5Kanji}) => {
   const [kanjiList, setKanjiList] = useState([]);
   const [hoverKanji, setHoverKanji] = useState(null);
   const updateKanjiList = (e) => {
