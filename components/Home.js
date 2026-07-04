@@ -1,6 +1,5 @@
 import { N5Kanji } from "./N5Kanji.js";
 import { useState } from "react";
-import KanjiHover from "./KanjiHover.js";
 import SideBar from "./SideBar.js";
 
 export default Home = () => {
