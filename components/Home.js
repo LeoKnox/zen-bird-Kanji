@@ -19,7 +19,7 @@ export default Home = () => {
       <h1>Home</h1>
       <div>
         <h2>家</h2>
-        <KanjiSelect />
+        <KanjiSelect N5Kanji={N5Kanji} />
       </div>
     </>
   );
