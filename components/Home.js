@@ -1,6 +1,7 @@
 import { N5Kanji } from "./N5Kanji.js";
 import { useState } from "react";
 import SideBar from "./SideBar.js";
+import KanjiSelect from "./KanjiSelect.js";
 
 export default Home = () => {
   const [kanjiList, setKanjiList] = useState([]);
@@ -12,108 +13,13 @@ export default Home = () => {
           kanji.filter((index) => e.target.value !== index)
         );
   };
-  const OnHover = (props) => {
-    return (
-      <div
-        style={{
-          zindex: 10,
-          padding: "10px",
-        }}
-      >
-        <label>
-          {props.title}:{props.data}
-        </label>
-      </div>
-    );
-  };
+
   return (
     <>
       <h1>Home</h1>
       <div>
         <h2>家</h2>
-        <p
-          style={{
-            height: "1em",
-          }}
-        >
-          {hoverKanji >= 0 && <OnHover title={hoverKanji} />}
-        </p>
-        <div
-          className="kanjiWrapper"
-          style={{ color: "green", fontWeight: "bold", display: "flex" }}
-        >
-          <div
-            className="kanjiRow"
-            style={{ overflow: "visible", display: "flex" }}
-          >
-            {N5Kanji.map((row, kanjiId) => (
-              <div
-                className="kanjiColumn"
-                id={kanjiId}
-                onMouseEnter={() => setHoverKanji(kanjiId)}
-                onMouseLeave={() => setHoverKanji(null)}
-              >
-                <p>
-                  <input
-                    type="checkbox"
-                    value={kanjiId}
-                    onClick={(e) => updateKanjiList(e)}
-                  />
-                  {kanjiId}
-                </p>
-                {row.Kanji}
-                <div
-                  style={{
-                    position: "relative",
-                    flexDirection: "column",
-                    verticalAlign: "top",
-                    backgroundColor: "#802b00",
-                    color: "tan",
-                    borderRadius: "10px",
-                    display: "flex",
-                    alignItems: "flex-start",
-                    border: "2px solid tan",
-                    whiteSpace: "nowrap",
-                    width: "max-content",
-                    minWidth: "150px",
-                    opacity: hoverKanji === kanjiId ? 1 : 0,
-                    visibility: hoverKanji === kanjiId ? "visible" : "hidden",
-                    pointerEvents: "none",
-
-                    transition:
-                      "opacity 0.3s ease-in-out, visibility 0.3s ease-in-out",
-                    transitionDelay: hoverKanji === kanjiId ? "0.4s" : "0s",
-                  }}
-                >
-                  {hoverKanji == kanjiId && (
-                    <>
-                      {Object.entries(row).map((data) => (
-                        <div name="info">
-                          <label
-                            key={data}
-                            style={{
-                              display: "block",
-                              padding: "8px",
-                              textAlign: "left",
-                              fontWeight: "bold",
-                              fontSize: "1em",
-                              overflow: "visible",
-                            }}
-                          >
-                            {hoverKanji >= 0 && (
-                              <OnHover title={data[0]} data={data[1]} />
-                            )}
-                          </label>
-                        </div>
-                      ))}
-                    </>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-          <SideBar kanjiList={kanjiList} />
-        </div>
+        <KanjiSelect />
       </div>
     </>
   );
