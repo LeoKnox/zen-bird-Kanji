@@ -1,4 +1,4 @@
-export default SideBar = ({ kanjiList }) => {
+export default SideBar = ({ kanjiList, setCurrentPage }) => {
   return (
     <div
       className="sideBar"
@@ -12,7 +12,6 @@ export default SideBar = ({ kanjiList }) => {
         padding: "10px",
         minHeight: "60vh",
         position: "relative",
-        height: "auto",
       }}
     >
       <p>Kanji</p>
@@ -28,7 +27,12 @@ export default SideBar = ({ kanjiList }) => {
         {kanjiList}
       </label>
       <div style={{ position: "absolute", bottom: 0, left: 0, with: "100%" }}>
-        <button className="kanjiButton">practice</button>
+        <button
+          className="kanjiButton"
+          onClick={() => setCurrentPage("practice")}
+        >
+          practice
+        </button>
         <button className="kanjiButton">quiz</button>
       </div>
     </div>
