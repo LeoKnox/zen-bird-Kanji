@@ -109,7 +109,7 @@ export default KanjiSelect = ({ N5Kanji, setCurrentPage }) => {
             </div>
           ))}
         </div>
-        <SideBar kanjiList={kanjiList} />
+        <SideBar kanjiList={kanjiList} setCurrentPage={setCurrentPage} />
       </div>
     </>
   );
