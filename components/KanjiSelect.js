@@ -1,8 +1,7 @@
 import { useState } from "react";
 import SideBar from "./SideBar.js";
 
-
-export default KanjiSelect = ({N5Kanji}) => {
+export default KanjiSelect = ({ N5Kanji, setCurrentPage }) => {
   const [kanjiList, setKanjiList] = useState([]);
   const [hoverKanji, setHoverKanji] = useState(null);
   const updateKanjiList = (e) => {
@@ -28,6 +27,7 @@ export default KanjiSelect = ({N5Kanji}) => {
   };
   return (
     <>
+      <button onClick={() => setCurrentPage("blue")}>tttt</button>
       <p
         style={{
           height: "1em",
