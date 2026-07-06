@@ -4,8 +4,12 @@ import SideBar from "./SideBar.js";
 import KanjiSelect from "./KanjiSelect.js";
 
 export default Home = () => {
-  const  [currentPage, setCurrentPage] = useState("kanjiSelect");
-  const availablePages = { kanjiSelect: <KanjiSelect N5Kanji={N5Kanji} /> };
+  const [currentPage, setCurrentPage] = useState("kanjiSelect");
+  const availablePages = {
+    kanjiSelect: (
+      <KanjiSelect setCurrentPage={setCurrentPage} N5Kanji={N5Kanji} />
+    ),
+  };
   return (
     <>
       <h1>Home</h1>
