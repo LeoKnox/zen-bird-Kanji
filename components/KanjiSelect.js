@@ -27,7 +27,6 @@ export default KanjiSelect = ({ N5Kanji, setCurrentPage }) => {
   };
   return (
     <>
-      <button onClick={() => setCurrentPage("blue")}>tttt</button>
       <p
         style={{
           height: "1em",
