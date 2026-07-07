@@ -6,8 +6,16 @@ import Quiz from "./Quiz.js";
 
 export default Home = () => {
   const [currentPage, setCurrentPage] = useState("家");
+  const [kanjiList, setKanjiList] = useState([]);
   const availablePages = {
-    家: <KanjiSelect setCurrentPage={setCurrentPage} N5Kanji={N5Kanji} />,
+    家: (
+      <KanjiSelect
+        setCurrentPage={setCurrentPage}
+        N5Kanji={N5Kanji}
+        setKanjiList={setKanjiList}
+        kanjiList={kanjiList}
+      />
+    ),
     クイズ: <Quiz setCurrentPage={setCurrentPage} />,
   };
   return (
