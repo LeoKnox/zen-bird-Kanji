@@ -1,4 +1,4 @@
-export default Quiz = (setCurrentPage = { setCurrentPage }) => {
+export default Quiz = ({ setCurrentPage }) => {
   return (
     <>
       <p>クイズ</p>
