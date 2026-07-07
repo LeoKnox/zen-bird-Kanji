@@ -8,7 +8,7 @@ export default Home = () => {
   const [currentPage, setCurrentPage] = useState("家");
   const availablePages = {
     家: <KanjiSelect setCurrentPage={setCurrentPage} N5Kanji={N5Kanji} />,
-    クイズ: <Quiz />,
+    クイズ: <Quiz setCurrentPage={setCurrentPage} />,
   };
   return (
     <>
