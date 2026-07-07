@@ -2,7 +2,9 @@ export default Quiz = ({ setCurrentPage }) => {
   return (
     <>
       <p>クイズ</p>
-      <button onClick={() => setCurrentPage("家")}>Home</button>
+      <button className="kanjiButton" onClick={() => setCurrentPage("家")}>
+        Home
+      </button>
     </>
   );
 };
