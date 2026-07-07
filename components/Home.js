@@ -10,13 +10,13 @@ export default Home = () => {
     kanjiSelect: (
       <KanjiSelect setCurrentPage={setCurrentPage} N5Kanji={N5Kanji} />
     ),
-    quiz: <Quiz />,
+    クイズ: <Quiz />,
   };
   return (
     <>
       <h1>Home</h1>
       <div>
-        <h2>家</h2>
+        <h2>家 {currentPage}</h2>
         {availablePages[currentPage]}
       </div>
     </>
