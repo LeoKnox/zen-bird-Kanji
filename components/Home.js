@@ -2,6 +2,7 @@ import { N5Kanji } from "./N5Kanji.js";
 import { useState } from "react";
 import SideBar from "./SideBar.js";
 import KanjiSelect from "./KanjiSelect.js";
+import Quiz from "./Quiz.js";
 
 export default Home = () => {
   const [currentPage, setCurrentPage] = useState("kanjiSelect");
@@ -9,6 +10,7 @@ export default Home = () => {
     kanjiSelect: (
       <KanjiSelect setCurrentPage={setCurrentPage} N5Kanji={N5Kanji} />
     ),
+    quiz: <Quiz />,
   };
   return (
     <>
