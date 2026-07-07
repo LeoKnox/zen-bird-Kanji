@@ -1,8 +1,12 @@
 import { useState } from "react";
 import SideBar from "./SideBar.js";
 
-export default KanjiSelect = ({ N5Kanji, setCurrentPage }) => {
-  const [kanjiList, setKanjiList] = useState([]);
+export default KanjiSelect = ({
+  N5Kanji,
+  setCurrentPage,
+  kanjiList,
+  setKanjiList,
+}) => {
   const [hoverKanji, setHoverKanji] = useState(null);
   const updateKanjiList = (e) => {
     e.target.checked
@@ -113,3 +117,4 @@ export default KanjiSelect = ({ N5Kanji, setCurrentPage }) => {
     </>
   );
 };
+
