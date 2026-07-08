@@ -4,7 +4,11 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
       <p>クイズ</p>
       <button className="kanjiButton" onClick={() => setCurrentPage("家")}>
         Home
-        <p>{kanjiList}</p>
+        <p>
+          {kanjiList.map((kanji) => (
+            <p>+{kanji}</p>
+          ))}
+        </p>
       </button>
     </>
   );
