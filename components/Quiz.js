@@ -6,7 +6,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
         Home
         <div className="kanjiQuiz">
           {kanjiList.map((kanji) => (
-            <label>+{kanji}</label>
+            <label className="quizBox">+{kanji}</label>
           ))}
         </div>
       </button>
