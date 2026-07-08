@@ -16,7 +16,7 @@ export default Home = () => {
         kanjiList={kanjiList}
       />
     ),
-    クイズ: <Quiz setCurrentPage={setCurrentPage} />,
+    クイズ: <Quiz setCurrentPage={setCurrentPage} kanjiList={kanjiList} />,
   };
   return (
     <>
