@@ -20,9 +20,8 @@ export default Home = () => {
   };
   return (
     <>
-      <h1>Home</h1>
       <div>
-        <h2>家 {currentPage}</h2>
+        <h2>{currentPage}</h2>
         {availablePages[currentPage]}
       </div>
     </>
