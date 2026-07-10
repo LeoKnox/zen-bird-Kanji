@@ -28,14 +28,15 @@ body {
   width: 39em;
   margin: 10px;
   grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-  gap: 20px;
+  gap: 10px;
   background: blue;
 }
 
 .quizBox {
   width: 40%;
   aspect-ratio: 16 / 9;
-  backgorund: lightblue;
+  background-color: darkblue;
+  border: lightskyblue 2px solid;
   object-fit: cover;
 }
 
