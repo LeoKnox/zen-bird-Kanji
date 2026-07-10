@@ -27,6 +27,7 @@ body {
   display: grid;
   width: 39em;
   padding: 10px;
+  align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
   gap: 10px;
   background: lemonchiffon;
