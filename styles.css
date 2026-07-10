@@ -26,7 +26,7 @@ body {
 .kanjiQuiz {
   display: grid;
   width: 39em;
-  margin: 10px;
+  padding: 10px;
   grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
   gap: 10px;
   background: lemonchiffon;
