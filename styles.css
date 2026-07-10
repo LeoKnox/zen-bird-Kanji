@@ -36,8 +36,9 @@ body {
   width: 40%;
   aspect-ratio: 16 / 9;
   background-color: yellow;
+  align-items: center;
   color: blue;
-  border: goldenrod 2px solid;
+  border: goldenrod 3px solid;
   object-fit: cover;
 }
 
