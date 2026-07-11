@@ -39,6 +39,6 @@ export const N5Kanji = [
   },
 ];
 
-export const singleKanji = () => {
-  return "red";
+export const singleKanji = (inedex = 1) => {
+  index >= 0 && index < N5Kanji.length ? N5Kanji[index].meaning : null;
 };
