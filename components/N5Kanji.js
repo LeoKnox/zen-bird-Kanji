@@ -1,3 +1,5 @@
+// https://www.llanai.com/jlpt/n5/vocabulary/complete
+
 export const N5Kanji = [
   {
     Kanji: "会う",
@@ -36,3 +38,7 @@ export const N5Kanji = [
     Meaning: "east",
   },
 ];
+
+export const singleKanji = () => {
+  return "red";
+};
