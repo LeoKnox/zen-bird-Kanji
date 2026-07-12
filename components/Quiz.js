@@ -8,11 +8,11 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
       <button className="kanjiButton" onClick={() => setCurrentPage("家")}>
         <div className="kanjiQuiz">
           {kanjiList.map((kanji) => (
-            <label className="quizBox">+{kanji}</label>
+            <label className="quizBox">{singleKanji(kanji).Kanji}</label>
           ))}
         </div>
       </button>
-      <p>+{singleKanji(1)}</p>
     </>
   );
 };
+
