@@ -39,4 +39,4 @@ export const N5Kanji = [
 ];
 
 export const singleKanji = (index = 1) =>
-  index >= 0 && index < N5Kanji.length ? N5Kanji[index].Meaning : null;
+  index >= 0 && index < N5Kanji.length ? N5Kanji[index] : null;
