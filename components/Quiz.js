@@ -12,8 +12,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
           ))}
         </div>
       </button>
-      <p>+{() => singleKanji()}</p>
+      <p>+{singleKanji(1)}</p>
     </>
   );
 };
-
