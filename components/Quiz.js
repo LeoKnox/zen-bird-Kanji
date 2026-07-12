@@ -1,6 +1,7 @@
 import { singleKanji } from "./N5Kanji.js";
 
 export default Quiz = ({ setCurrentPage, kanjiList }) => {
+  console.log(singleKanji());
   return (
     <>
       <p>クイズ</p>
@@ -11,7 +12,8 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
           ))}
         </div>
       </button>
-      {() => singleKanji()}
+      <p>+{() => singleKanji()}</p>
     </>
   );
 };
+
