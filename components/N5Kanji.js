@@ -1,7 +1,4 @@
 // https://www.llanai.com/jlpt/n5/vocabulary/complete
-export const singleKanji = (index = 1) =>
-  index >= 0 && index < N5Kanji.length ? N5Kanji[index].Meaning : null;
-
 export const N5Kanji = [
   {
     Kanji: "会う",
@@ -40,3 +37,6 @@ export const N5Kanji = [
     Meaning: "east",
   },
 ];
+
+export const singleKanji = (index = 1) =>
+  index >= 0 && index < N5Kanji.length ? N5Kanji[index].Meaning : null;
