@@ -36,6 +36,30 @@ export const N5Kanji = [
     Romaji: "higashi",
     Meaning: "east",
   },
+  {
+    Kanji: "秋",
+    Furigana: "あき",
+    Romaji: "aki",
+    Meaning: "autumn, fall",
+  },
+  {
+    Kanji: "春",
+    Furigana: "はる",
+    Romaji: "haru",
+    Meaning: "spring",
+  },
+  {
+    Kanji: "夏",
+    Furigana: "なつ",
+    Romaji: "natsu",
+    Meaning: "summer",
+  },
+  {
+    Kanji: "冬",
+    Furigana: "ふゆ",
+    Romaji: "fuyu",
+    Meaning: "winter",
+  },
 ];
 
 export const singleKanji = (index = 1) =>
