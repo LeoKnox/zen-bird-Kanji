@@ -7,7 +7,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
       <p>クイズ</p>
 
       <div className="kanjiQuiz">
-        {kanjiList.length > 5 ||
+        {kanjiList.length > 5 &&
           [...kanjiList]
             .sort(() => 0.5 - Math.random())
             .slice(0, 6)
