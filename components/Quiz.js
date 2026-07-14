@@ -5,15 +5,17 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   return (
     <>
       <p>クイズ</p>
+
+      <div className="kanjiQuiz">
+        {[...kanjiList]
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 6)
+          .map((kanji) => (
+            <label className="quizBox">{singleKanji(kanji).Kanji}</label>
+          ))}
+      </div>
       <button className="kanjiButton" onClick={() => setCurrentPage("家")}>
-        <div className="kanjiQuiz">
-          {[...kanjiList]
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 6)
-            .map((kanji) => (
-              <label className="quizBox">{singleKanji(kanji).Kanji}</label>
-            ))}
-        </div>
+        Home
       </button>
     </>
   );
