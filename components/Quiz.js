@@ -3,7 +3,7 @@ import useState from "react";
 
 export default Quiz = ({ setCurrentPage, kanjiList }) => {
   const [kanjiQuiz, setKanjiQuiz] = useState(
-    [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
+    kanjiList.sort(() => 0.5 - Math.random()).slice(0, 6)
   );
   console.log(singleKanji());
   const updateKanjiQuiz = () => {
