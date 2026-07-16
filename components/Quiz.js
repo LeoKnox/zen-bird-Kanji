@@ -14,7 +14,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   return (
     <>
       <p>クイズ</p>
-      {singleKanji(kanjiAnswer).Kanji}
+      {singleKanji(kanjiQuiz[kanjiAnswer]).Kanji} : {kanjiAnswer}
       <div className="kanjiQuiz">
         {kanjiList.length > 5 ? (
           kanjiQuiz.map((kanji) => (
