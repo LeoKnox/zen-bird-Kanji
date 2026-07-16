@@ -5,14 +5,14 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   const [kanjiQuiz, setKanjiQuiz] = useState(
     [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
   );
+  const [kanjiAnswer, setKanjiAnswer] = useState(kanjiList[0]);
   console.log(singleKanji());
   const updateKanjiQuiz = () => {
     setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
   };
   return (
     <>
-      <p>クイズ</p>
-
+      <p>クイズ</p>+{kanjiAnswer.meaning}+
       <div className="kanjiQuiz">
         {kanjiList.length > 5 ? (
           kanjiQuiz.map((kanji) => (
