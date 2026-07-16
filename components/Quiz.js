@@ -5,7 +5,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   const [kanjiQuiz, setKanjiQuiz] = useState(
     [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
   );
-  const [kanjiAnswer, setKanjiAnswer] = useState(Math.random() * 6);
+  const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 7));
   console.log(singleKanji());
   const updateKanjiQuiz = () => {
     setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
