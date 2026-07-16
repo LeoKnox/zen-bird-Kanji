@@ -24,7 +24,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
           <p>Please select 6 Kanji</p>
         )}
       </div>
-      <button className="kanjiButton" onClick={() => setCurrentPage("家")}>
+      <button className="kanjiButton" onClick={() => setCurrentPage(["家"])}>
         Home
       </button>
     </>
