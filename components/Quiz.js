@@ -7,7 +7,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   );
   console.log(singleKanji());
   const updateKanjiQuiz = () => {
-    setKanjiQuiz([1, 1, 1, 1, 1, 1]);
+    setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
   };
   return (
     <>
