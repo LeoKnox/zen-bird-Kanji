@@ -13,7 +13,8 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   };
   return (
     <>
-      <p>クイズ</p>+{[kanjiAnswer]}+
+      <p>クイズ</p>
+      {kanjiQuiz[kanjiAnswer]}+
       <div className="kanjiQuiz">
         {kanjiList.length > 5 ? (
           kanjiQuiz.map((kanji) => (
