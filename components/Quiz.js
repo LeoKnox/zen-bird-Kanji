@@ -2,9 +2,9 @@ import { singleKanji } from "./N5Kanji.js";
 import useState from "react";
 
 export default Quiz = ({ setCurrentPage, kanjiList }) => {
-  const [kanjiQuiz, setKanjiQuiz] = useState(
-    kanjiList.sort(() => 0.5 - Math.random()).slice(0, 6)
-  );
+  let temp = kanjiList.sort(() => 0.5 - Math.random()).slice(0, 6);
+  alet(temp);
+  const [kanjiQuiz, setKanjiQuiz] = useState(temp);
   console.log(singleKanji());
   const updateKanjiQuiz = () => {
     return (kanjiQuiz = [1, 1, 1, 1, 1, 1]);
