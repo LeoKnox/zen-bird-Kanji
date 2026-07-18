@@ -25,10 +25,10 @@ body {
 
 .kanjiQuiz {
   display: grid;
-  width: 39em;
+  width: 95%;
   padding: 10px;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
   gap: 10px;
   background: lemonchiffon;
 }
@@ -36,9 +36,9 @@ body {
 .quizBox {
   width: 40%;
   aspect-ratio: 16 / 9;
-  background-color: yellow;
   color: blue;
   border: goldenrod 3px solid;
+  align-items: center;
   object-fit: cover;
 }
 
