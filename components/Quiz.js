@@ -22,7 +22,13 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
       <div className="kanjiQuiz">
         {kanjiList.length > 5 ? (
           kanjiQuiz.map((kanji, v) => (
-            <div style={{ backgroundColor: "red", padding: "8px" }}>
+            <div
+              style={{
+                display: "{wrong.contains(v) ? block : none}",
+                backgroundColor: "red",
+                padding: "8px",
+              }}
+            >
               <label
                 id={v}
                 onClick={(e) => updateKanjiQuiz(e)}
