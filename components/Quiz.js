@@ -7,9 +7,11 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   );
   const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 7));
   console.log(singleKanji());
-  const updateKanjiQuiz = () => {
-    setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
-    setKanjiAnswer(Math.floor(Math.random() * 6));
+  const updateKanjiQuiz = (e) => {
+    if (e.target.id >= 0) {
+      setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
+      setKanjiAnswer(Math.floor(Math.random() * 6));
+    }
   };
   return (
     <>
