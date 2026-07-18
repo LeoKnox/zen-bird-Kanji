@@ -33,7 +33,9 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
                 id={v}
                 onClick={(e) => updateKanjiQuiz(e)}
                 className="quizBox"
-                style={{ backgroundColor: v == 1 ? "green" : "red" }}
+                style={{
+                  backgroundColor: wrong.includes(kanji) ? "green" : "red",
+                }}
               >
                 {singleKanji(kanji).Kanji} + {v}
               </label>
