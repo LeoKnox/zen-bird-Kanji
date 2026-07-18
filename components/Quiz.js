@@ -24,8 +24,8 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
           kanjiQuiz.map((kanji, v) => (
             <div
               style={{
-                display: "{wrong.includes(kanji) ? none : none}",
-                backgroundColor: "red",
+                //display: "{wrong.includes(kanji) ? none : none}",
+                //backgroundColor: "red",
                 padding: "8px",
               }}
             >
@@ -33,6 +33,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
                 id={v}
                 onClick={(e) => updateKanjiQuiz(e)}
                 className="quizBox"
+                style={{ border: "4px solid red" }}
               >
                 {singleKanji(kanji).Kanji} + {v}
               </label>
