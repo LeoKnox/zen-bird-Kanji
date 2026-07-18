@@ -6,11 +6,13 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
     [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
   );
   const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 7));
-  console.log(singleKanji());
+  let wrong = [];
   const updateKanjiQuiz = (e) => {
     if (e.target.id == kanjiAnswer) {
       setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
       setKanjiAnswer(Math.floor(Math.random() * 6));
+    } else {
+      wrong.push(e.target.id);
     }
   };
   return (
@@ -20,13 +22,15 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
       <div className="kanjiQuiz">
         {kanjiList.length > 5 ? (
           kanjiQuiz.map((kanji, v) => (
-            <label
-              id={v}
-              onClick={(e) => updateKanjiQuiz(e)}
-              className="quizBox"
-            >
-              {singleKanji(kanji).Kanji} + {v}
-            </label>
+            <div style={{ backgroundColor: "red", padding: "8px" }}>
+              <label
+                id={v}
+                onClick={(e) => updateKanjiQuiz(e)}
+                className="quizBox"
+              >
+                {singleKanji(kanji).Kanji} + {v}
+              </label>
+            </div>
           ))
         ) : (
           <p>Please select 6 Kanji</p>
