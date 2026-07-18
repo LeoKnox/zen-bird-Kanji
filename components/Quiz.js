@@ -13,7 +13,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
       setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
       setKanjiAnswer(Math.floor(Math.random() * 6));
     } else {
-      setIsWrong = [...isWrong, v];
+      setIsWrong([...isWrong, e.target.id]);
     }
   };
   return (
@@ -35,7 +35,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
                 onClick={(e) => updateKanjiQuiz(e)}
                 className="quizBox"
                 style={{
-                  backgroundColor: isWrong.includes(kanji) ? "yellow" : "red",
+                  backgroundColor: isWrong.includes(kanji) ? "red" : "yellow",
                 }}
               >
                 {singleKanji(kanji).Kanji} + {v}
