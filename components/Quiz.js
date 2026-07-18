@@ -6,7 +6,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
     [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
   );
   const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 7));
-  let wrong = [];
+  let wrong = [1, 3, 5];
   const updateKanjiQuiz = (e) => {
     if (e.target.id == kanjiAnswer) {
       setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
@@ -24,7 +24,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
           kanjiQuiz.map((kanji, v) => (
             <div
               style={{
-                display: "{wrong.contains(v) ? none : block}",
+                display: "{wrong.includes(kanji) ? none : none}",
                 backgroundColor: "red",
                 padding: "8px",
               }}
