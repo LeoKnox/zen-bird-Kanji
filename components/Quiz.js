@@ -19,28 +19,20 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   return (
     <>
       <p>クイズ</p>
-      {singleKanji(kanjiQuiz[kanjiAnswer]).Kanji} : {kanjiAnswer}
+      {singleKanji(kanjiQuiz[kanjiAnswer]).Kanji} : {kanjiAnswer} : {isWrong}
       <div className="kanjiQuiz">
         {kanjiList.length > 5 ? (
           kanjiQuiz.map((kanji, v) => (
-            <div
+            <label
+              id={v}
+              onClick={(e) => updateKanjiQuiz(e)}
+              className="quizBox"
               style={{
-                //display: "{wrong.includes(kanji) ? none : none}",
-                //backgroundColor: "red",
-                padding: "8px",
+                backgroundColor: isWrong.includes(kanji) ? "red" : "yellow",
               }}
             >
-              <label
-                id={v}
-                onClick={(e) => updateKanjiQuiz(e)}
-                className="quizBox"
-                style={{
-                  backgroundColor: isWrong.includes(kanji) ? "red" : "yellow",
-                }}
-              >
-                {singleKanji(kanji).Kanji} + {v}
-              </label>
-            </div>
+              {singleKanji(kanji).Kanji} + {v}
+            </label>
           ))
         ) : (
           <p>Please select 6 Kanji</p>
