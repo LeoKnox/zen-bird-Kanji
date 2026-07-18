@@ -17,9 +17,9 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
       {singleKanji(kanjiQuiz[kanjiAnswer]).Kanji} : {kanjiAnswer}
       <div className="kanjiQuiz">
         {kanjiList.length > 5 ? (
-          kanjiQuiz.map((kanji) => (
-            <label onClick={() => updateKanjiQuiz()} className="quizBox">
-              {singleKanji(kanji).Kanji}
+          kanjiQuiz.map((kanji, v) => (
+            <label id={v} onClick={() => updateKanjiQuiz()} className="quizBox">
+              {singleKanji(kanji).Kanji} + {v}
             </label>
           ))
         ) : (
