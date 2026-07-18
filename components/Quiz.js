@@ -24,7 +24,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
           kanjiQuiz.map((kanji, v) => (
             <div
               style={{
-                display: "{wrong.contains(v) ? block : none}",
+                display: "{wrong.contains(v) ? none : block}",
                 backgroundColor: "red",
                 padding: "8px",
               }}
