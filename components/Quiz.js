@@ -8,12 +8,12 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 7));
   const [isWrong, setIsWrong] = useState([1, 3, 5]);
   const updateKanjiQuiz = (e) => {
-    console.log("reds");
+    console.log("redss");
     if (e.target.id == kanjiAnswer) {
       setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
       setKanjiAnswer(Math.floor(Math.random() * 6));
     } else {
-      setIsWrong([2, 4, 6]);
+      setIsWrong((prev) => [...isWrong, e.target.id]);
     }
   };
   return (
