@@ -28,10 +28,10 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
               onClick={(e) => updateKanjiQuiz(e)}
               className="quizBox"
               style={{
-                backgroundColor: isWrong.includes(kanji) ? "red" : "yellow",
+                backgroundColor: isWrong.includes(v) ? "red" : "yellow",
               }}
             >
-              {singleKanji(kanji).Kanji} + {v}
+              {singleKanji(kanji).Kanji} + {v} + {kanji}
             </label>
           ))
         ) : (
