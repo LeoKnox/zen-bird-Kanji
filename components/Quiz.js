@@ -6,12 +6,13 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
     [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
   );
   const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 7));
-  const [isWrong, setIsWrong] = useState([1, 3, 5]);
+  const [isWrong, setIsWrong] = useState([]);
   const updateKanjiQuiz = (e) => {
     console.log("redss");
     if (e.target.id == kanjiAnswer) {
       setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
       setKanjiAnswer(Math.floor(Math.random() * 6));
+      setIsWrong([]);
     } else {
       setIsWrong((prev) => [...isWrong, +e.target.id]);
     }
