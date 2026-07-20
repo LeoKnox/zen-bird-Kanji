@@ -12,7 +12,9 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
     if (e.target.id == kanjiAnswer) {
       setKanjiQuiz([...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6));
       setKanjiAnswer(Math.floor(Math.random() * 6));
-      setIsWrong([]);
+      setTimeout(() => {
+        setIsWrong([]);
+      }, 1000);
     } else {
       setIsWrong((prev) => [...isWrong, +e.target.id]);
     }
