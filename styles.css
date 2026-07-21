@@ -26,11 +26,13 @@ body {
 .kanjiQuiz {
   display: grid;
   width: 95%;
+  height: 70vh;
   padding: 10px;
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
   gap: 10px;
   background: lemonchiffon;
+  border-radius: 100%;
 }
 
 .quizBox {
