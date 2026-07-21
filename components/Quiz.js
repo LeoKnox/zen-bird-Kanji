@@ -35,7 +35,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
               className="quizBox"
               style={{
                 backgroundColor: isWrong.includes(v) ? "red" : "yellow",
-                isButtonDisabled: { disableButton },
+                isButtonDisabled: "true",
               }}
             >
               {singleKanji(kanji).Kanji} + {v} + {kanji}
