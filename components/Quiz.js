@@ -37,6 +37,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
               className="quizBox"
               style={{
                 fontSize: "1.7em",
+                border: "1px solid black",
                 backgroundColor: isWrong.includes(v) ? "red" : "yellow",
                 disabled: "true",
               }}
