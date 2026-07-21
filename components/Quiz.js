@@ -8,10 +8,10 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 7));
   const [isWrong, setIsWrong] = useState([]);
   const [disableButton, setDisableButton] = useState("true");
-  const updateKanjiQuiz = (e) => {
+  const updateKanjiQuiz = (e, v) => {
     console.log("redss");
     if (e.target.id == kanjiAnswer) {
-      const element = document.getElementById("0");
+      const element = document.getElementById(v);
       element.style.backgroundColor = "lightgreen";
       setTimeout(() => {
         setKanjiQuiz(
@@ -33,7 +33,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
           kanjiQuiz.map((kanji, v) => (
             <label
               id={v}
-              onClick={(e) => updateKanjiQuiz(e)}
+              onClick={(e) => updateKanjiQuiz(e, v)}
               className="quizBox"
               style={{
                 backgroundColor: isWrong.includes(v) ? "red" : "yellow",
