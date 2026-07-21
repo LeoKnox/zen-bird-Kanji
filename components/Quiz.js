@@ -11,6 +11,8 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   const updateKanjiQuiz = (e) => {
     console.log("redss");
     if (e.target.id == kanjiAnswer) {
+      const element = document.getElementById("0");
+      element.style.backgroundColor = "lightgreen";
       setTimeout(() => {
         setKanjiQuiz(
           [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
