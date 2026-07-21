@@ -5,7 +5,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   const [kanjiQuiz, setKanjiQuiz] = useState(
     [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
   );
-  const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 7));
+  const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 6));
   const [isWrong, setIsWrong] = useState([]);
   const [disableButton, setDisableButton] = useState("true");
   const updateKanjiQuiz = (e, v) => {
@@ -36,7 +36,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
               onClick={(e) => updateKanjiQuiz(e, v)}
               className="quizBox"
               style={{
-                fontSize: "1.5em",
+                fontSize: "1.7em",
                 backgroundColor: isWrong.includes(v) ? "red" : "yellow",
                 disabled: "true",
               }}
