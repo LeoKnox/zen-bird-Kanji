@@ -28,7 +28,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   return (
     <>
       <p>クイズ</p>
-      {singleKanji(kanjiQuiz[kanjiAnswer]).Kanji} : {kanjiAnswer} : {isWrong}
+      {singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}
       <div className="kanjiQuiz">
         {kanjiList.length >= 5 ? (
           kanjiQuiz.map((kanji, v) => (
@@ -41,7 +41,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
                 disabled: "true",
               }}
             >
-              {singleKanji(kanji).Kanji} + {v} + {kanji}
+              {singleKanji(kanji).Kanji}
             </label>
           ))
         ) : (
