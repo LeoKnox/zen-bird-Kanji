@@ -7,6 +7,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   );
   const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 7));
   const [isWrong, setIsWrong] = useState([]);
+  const [disableButton, setDisableButton] = useState("true");
   const updateKanjiQuiz = (e) => {
     console.log("redss");
     if (e.target.id == kanjiAnswer) {
@@ -34,6 +35,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
               className="quizBox"
               style={{
                 backgroundColor: isWrong.includes(v) ? "red" : "yellow",
+                isButtonDisabled: { disableButton },
               }}
             >
               {singleKanji(kanji).Kanji} + {v} + {kanji}
