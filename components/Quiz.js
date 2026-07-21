@@ -19,6 +19,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
         );
         setKanjiAnswer(Math.floor(Math.random() * 6));
         setIsWrong([]);
+        element.style.backgroundColor = "yellow";
       }, 1000);
     } else {
       setIsWrong((prev) => [...isWrong, +e.target.id]);
