@@ -27,8 +27,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   };
   return (
     <>
-      <p>クイズ</p>
-      {singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}
+      <h3>{singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}</h3>
       <div className="kanjiQuiz">
         {kanjiList.length >= 5 ? (
           kanjiQuiz.map((kanji, v) => (
@@ -37,6 +36,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
               onClick={(e) => updateKanjiQuiz(e, v)}
               className="quizBox"
               style={{
+                fontSize: "1.5em",
                 backgroundColor: isWrong.includes(v) ? "red" : "yellow",
                 disabled: "true",
               }}
