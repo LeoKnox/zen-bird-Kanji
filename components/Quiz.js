@@ -31,7 +31,43 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   return (
     <>
       <h3>{singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}</h3>
-      <h4 hidden={isCorrect}>{singleKanji(kanjiQuiz[kanjiAnswer]).Furigana}</h4>
+      <h3 hidden={isCorrect}>{singleKanji(kanjiQuiz[kanjiAnswer]).Furigana}</h3>
+      <div className="kanjiQuiz">
+        {kanjiList.length >= 5 ? (
+          kanjiQuiz.map((kanji, v) => (import { singleKanji } from "./N5Kanji.js";
+import { useState } from "react";
+
+export default Quiz = ({ setCurrentPage, kanjiList }) => {
+  const [kanjiQuiz, setKanjiQuiz] = useState(
+    [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
+  );
+  const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 6));
+  const [isWrong, setIsWrong] = useState([]);
+  const [isCorrect, setIsCorrect] = useState(true);
+  const [disableButton, setDisableButton] = useState("true");
+  const updateKanjiQuiz = (e, v) => {
+    console.log("redss");
+    if (e.target.id == kanjiAnswer) {
+      const element = document.getElementById(v);
+      element.style.backgroundColor = "lightgreen";
+      setIsCorrect(false);
+      setTimeout(() => {
+        setKanjiQuiz(
+          [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
+        );
+        setKanjiAnswer(Math.floor(Math.random() * 6));
+        setIsWrong([]);
+        element.style.backgroundColor = "yellow";
+        setIsCorrect(true);
+      }, 1000);
+    } else {
+      setIsWrong((prev) => [...isWrong, +e.target.id]);
+    }
+  };
+  return (
+    <>
+      <h3>{singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}</h3>
+      <h3 hidden={isCorrect}>{singleKanji(kanjiQuiz[kanjiAnswer]).Furigana}</h3>
       <div className="kanjiQuiz">
         {kanjiList.length >= 5 ? (
           kanjiQuiz.map((kanji, v) => (
@@ -42,7 +78,8 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
               style={{
                 fontSize: "1.7em",
                 border: "1px solid black",
-                backgroundColor: isWrong.includes(v) ? "red" : "yellow",
+                backgroundColor:
+                  isCorrect || isWrong.includes(v) ? "red" : "yellow",
                 disabled: "true",
               }}
             >
@@ -60,3 +97,28 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   );
 };
 
+            <label
+              id={v}
+              onClick={(e) => updateKanjiQuiz(e, v)}
+              className="quizBox"
+              style={{
+                fontSize: "1.7em",
+                border: "1px solid black",
+                backgroundColor:
+                  isCorrect || isWrong.includes(v) ? "red" : "yellow",
+                disabled: "true",
+              }}
+            >
+              {singleKanji(kanji).Kanji}
+            </label>
+          ))
+        ) : (
+          <p>Please select 6 Kanji</p>
+        )}
+      </div>
+      <button className="kanjiButton" onClick={() => setCurrentPage(["家"])}>
+        Home
+      </button>
+    </>
+  );
+};
