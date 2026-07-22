@@ -14,7 +14,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
     if (e.target.id == kanjiAnswer) {
       const element = document.getElementById(v);
       element.style.backgroundColor = "lightgreen";
-      setIsCorrect(true);
+      setIsCorrect(false);
       setTimeout(() => {
         setKanjiQuiz(
           [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
@@ -22,7 +22,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
         setKanjiAnswer(Math.floor(Math.random() * 6));
         setIsWrong([]);
         element.style.backgroundColor = "yellow";
-        setIsCorrect(false);
+        setIsCorrect(true);
       }, 1000);
     } else {
       setIsWrong((prev) => [...isWrong, +e.target.id]);
@@ -59,3 +59,4 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
     </>
   );
 };
+
