@@ -31,13 +31,21 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 6px;
-  background: lemonchiffon;
-  border: 3px solid darkgreen;
   border-radius: 100%;
   justify-items: stretch;
   align-items: stretch;
 }
 
+.quizBackground {
+  display: grid;
+  width: 95%;
+  height: 70vh;
+  padding: 6px;
+  gap: 6px;
+  background: lemonchiffon;
+  border: 3px solid darkgreen;
+  border-radius: 100%;
+}
 
 .quizBox {
   width: 20%;
