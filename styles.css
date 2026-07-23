@@ -27,8 +27,8 @@ body {
   display: grid;
   width: 95%;
   height: 70vh;
-  padding: 10px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 6px;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 6px;
   background: lemonchiffon;
@@ -40,8 +40,8 @@ body {
 
 
 .quizBox {
-  width: 40%;
-  aspect-ratio: 16 / 9;
+  width: 20%;
+  height: 20%;
   color: blue;
   border: goldenrod 3px solid;
   align-items: center;
