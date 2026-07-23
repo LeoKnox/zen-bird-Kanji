@@ -28,13 +28,16 @@ body {
   width: 95%;
   height: 70vh;
   padding: 10px;
-  place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 6px;
   background: lemonchiffon;
-  border: 2px solid darkred;
+  border: 3px solid darkgreen;
   border-radius: 100%;
+  justify-items: stretch;
+  align-items: stretch;
 }
+
 
 .quizBox {
   width: 40%;
