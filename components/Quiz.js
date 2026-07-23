@@ -32,26 +32,28 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
     <>
       <h3>{singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}</h3>
       <h3 hidden={isCorrect}>{singleKanji(kanjiQuiz[kanjiAnswer]).Furigana}</h3>
-      <div className="kanjiQuiz">
-        {kanjiList.length >= 5 ? (
-          kanjiQuiz.map((kanji, v) => (
-            <label
-              id={v}
-              onClick={(e) => updateKanjiQuiz(e, v)}
-              className="quizBox"
-              style={{
-                fontSize: "1.7em",
-                border: "1px solid black",
-                backgroundColor: isWrong.includes(v) ? "red" : "yellow",
-                disabled: "true",
-              }}
-            >
-              {singleKanji(kanji).Kanji}
-            </label>
-          ))
-        ) : (
-          <p>Please select 6 Kanji</p>
-        )}
+      <div className="quizBackground">
+        <div className="kanjiQuiz">
+          {kanjiList.length >= 5 ? (
+            kanjiQuiz.map((kanji, v) => (
+              <label
+                id={v}
+                onClick={(e) => updateKanjiQuiz(e, v)}
+                className="quizBox"
+                style={{
+                  fontSize: "1.7em",
+                  border: "1px solid black",
+                  backgroundColor: isWrong.includes(v) ? "red" : "yellow",
+                  disabled: "true",
+                }}
+              >
+                {singleKanji(kanji).Kanji}
+              </label>
+            ))
+          ) : (
+            <p>Please select 6 Kanji</p>
+          )}
+        </div>
       </div>
       <button className="kanjiButton" onClick={() => setCurrentPage(["家"])}>
         Home
