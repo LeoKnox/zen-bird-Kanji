@@ -40,6 +40,8 @@ body {
   display: grid;
   width: 95%;
   height: 70vh;
+  align-items: center;
+  justify-content: center;
   padding: 6px;
   gap: 6px;
   background: lemonchiffon;
@@ -48,8 +50,8 @@ body {
 }
 
 .quizBox {
-  width: 20%;
-  height: 20%;
+  width: 15vh;
+  height: 10vh;
   color: blue;
   border: goldenrod 3px solid;
   align-items: center;
