@@ -31,7 +31,9 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   return (
     <>
       <h3>{singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}</h3>
-      <h3 hidden={isCorrect}>{singleKanji(kanjiQuiz[kanjiAnswer]).Furigana}</h3>
+      <h3 visibility={isCorrect}>
+        {singleKanji(kanjiQuiz[kanjiAnswer]).Furigana}
+      </h3>
       <div className="quizBackground">
         <div className="kanjiQuiz">
           {kanjiList.length >= 5 ? (
