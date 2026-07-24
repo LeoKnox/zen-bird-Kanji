@@ -13,7 +13,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
     if (e.target.id == kanjiAnswer) {
       const element = document.getElementById(v);
       element.style.backgroundColor = "lightgreen";
-      setIsCorrect(false);
+      setIsCorrect("visible");
       setTimeout(() => {
         setKanjiQuiz(
           [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
@@ -21,7 +21,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
         setKanjiAnswer(Math.floor(Math.random() * 6));
         setIsWrong([]);
         element.style.backgroundColor = "yellow";
-        setIsCorrect(true);
+        setIsCorrect("hidden");
       }, 1000);
     } else {
       setIsWrong((prev) => [...isWrong, +e.target.id]);
@@ -30,7 +30,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   return (
     <>
       <h3>{singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}</h3>
-      <h3 style={{ visibility: "hidden" }}>
+      <h3 style={{ visibility: isCorrect }}>
         {singleKanji(kanjiQuiz[kanjiAnswer]).Furigana}
       </h3>
       <div className="quizBackground">
