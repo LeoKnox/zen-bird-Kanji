@@ -7,7 +7,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   );
   const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 6));
   const [isWrong, setIsWrong] = useState([]);
-  const [isCorrect, setIsCorrect] = useState(true);
+  const [isCorrect, setIsCorrect] = useState("hidden");
   const [disableButton, setDisableButton] = useState("true");
   const updateKanjiQuiz = (e, v) => {
     console.log("redss");
@@ -31,7 +31,7 @@ export default Quiz = ({ setCurrentPage, kanjiList }) => {
   return (
     <>
       <h3>{singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}</h3>
-      <h3 visibility={isCorrect}>
+      <h3 visibility="hidden">
         {singleKanji(kanjiQuiz[kanjiAnswer]).Furigana}
       </h3>
       <div className="quizBackground">
