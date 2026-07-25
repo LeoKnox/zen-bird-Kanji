@@ -33,6 +33,7 @@ body {
   align-content: center;
   justify-content: center;
   gap: 6px;
+  place-items: center;
   border-radius: 100%;
 }
 
