@@ -1,64 +1,89 @@
-import { singleKanji } from "./N5Kanji.js";
-import { useState } from "react";
+body {
+  background-color: tan;
+}
 
-export default Quiz = ({ setCurrentPage, kanjiList }) => {
-  const [kanjiQuiz, setKanjiQuiz] = useState(
-    [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
-  );
-  const [kanjiAnswer, setKanjiAnswer] = useState(Math.floor(Math.random() * 6));
-  const [isWrong, setIsWrong] = useState([]);
-  const [isCorrect, setIsCorrect] = useState("hidden");
-  const [disableButton, setDisableButton] = useState("true");
-  const updateKanjiQuiz = (e, v) => {
-    if (e.target.id == kanjiAnswer) {
-      const element = document.getElementById(v);
-      element.style.backgroundColor = "lightgreen";
-      setIsCorrect("visible");
-      setTimeout(() => {
-        setKanjiQuiz(
-          [...kanjiList].sort(() => 0.5 - Math.random()).slice(0, 6)
-        );
-        setKanjiAnswer(Math.floor(Math.random() * 6));
-        setIsWrong([]);
-        element.style.backgroundColor = "yellow";
-        setIsCorrect("hidden");
-      }, 1000);
-    } else {
-      setIsWrong((prev) => [...isWrong, +e.target.id]);
-    }
-  };
-  return (
-    <>
-      <h3>{singleKanji(kanjiQuiz[kanjiAnswer]).Meaning}</h3>
-      <h3 style={{ visibility: isCorrect }}>
-        {singleKanji(kanjiQuiz[kanjiAnswer]).Furigana}
-      </h3>
-      <div className="quizBackground">
-        <div className="kanjiQuiz">
-          {kanjiList.length >= 5 ? (
-            kanjiQuiz.map((kanji, v) => (
-              <label
-                id={v}
-                onClick={(e) => updateKanjiQuiz(e, v)}
-                className="quizBox"
-                style={{
-                  fontSize: "1.7em",
-                  border: "1px solid black",
-                  backgroundColor: isWrong.includes(v) ? "red" : "yellow",
-                  disabled: "true",
-                }}
-              >
-                {singleKanji(kanji).Kanji}
-              </label>
-            ))
-          ) : (
-            <p>Please select 6 Kanji</p>
-          )}
-        </div>
-      </div>
-      <button className="kanjiButton" onClick={() => setCurrentPage(["家"])}>
-        Home
-      </button>
-    </>
-  );
-};
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.kanjiButton {
+  background-color: darkred;
+  border-radius: 5px;
+  color: gold;
+  border: 1px solid gold;
+  padding: 0.3em;
+  text-decoration: none;
+}
+
+.kanjiRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 80%;
+}
+
+.kanjiQuiz {
+  display: grid;
+  width: 95%;
+  height: 70vh;
+  padding: 6px;
+  grid-template-columns: repeat(3, 18vh);
+  grid-template-rows: repeat(2, 12vh);
+  align-content: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 100%;
+}
+
+.quizBackground {
+  display: grid;
+  width: 95%;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  background: lemonchiffon;
+  border: 3px solid darkgreen;
+  border-radius: 100%;
+}
+
+.quizBox {
+  display: flex;
+  width: 13vh;
+  height: 10vh;
+  color: blue;
+  border: goldenrod 3px solid;
+  align-items: center;
+  justify-content: center;
+}
+
+.kanjiColumn {
+  color: darkgreen;
+  background-color: #ccff99;
+  flex: 0 0 33%;
+  box-sizing: border-box;
+  width: 25%;
+  height: 20vh;
+  border: 10px solid;
+  broder-radius: 20px;
+  border-image: linear-gradient(
+      to bottom,
+      #506b3c 0%,
+      #88a564 50%,
+      #506b3c 100%
+    )
+    1;
+}
+
+.kanjiColumn input[type="checkbox"] {
+  appearance: none;
+  margin-bottom: 0;
+  width: 1em;
+  height: 1em;
+  background: brown;
+}
+
+.kanjiColumn input[type="checkbox"]:checked {
+  appearance: revert;
+  accent-color: gold;
+}
