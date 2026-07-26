@@ -1,9 +1,9 @@
 import ReturnHome from "./ReturnHome.js";
 
-export default function Practice() {
+export default Practice = () => {
   return (
     <div>
-      <p>back</p>
+      <ReturnHome />
     </div>
   );
-}
+};
