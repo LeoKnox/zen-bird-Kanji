@@ -27,10 +27,7 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
         {kanjiList}
       </label>
       <div style={{ position: "absolute", bottom: 0, left: 0, with: "100%" }}>
-        <button
-          className="kanjiButton"
-          onClick={() => setCurrentPage("practice")}
-        >
+        <button className="kanjiButton" onClick={() => setCurrentPage("練習")}>
           practice
         </button>
         <button
