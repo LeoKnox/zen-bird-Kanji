@@ -17,7 +17,12 @@ export default Home = () => {
         kanjiList={kanjiList}
       />
     ),
-    練習: <Practice setCurrentPage={setCurrentPage} kanjiList={kanjiList} />,
+    練習: (
+      <>
+        <Practice setCurrentPage={setCurrentPage} kanjiList={kanjiList} />
+        <ReturnHome />
+      </>
+    ),
     クイズ: <Quiz setCurrentPage={setCurrentPage} kanjiList={kanjiList} />,
   };
   return (
