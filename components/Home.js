@@ -23,7 +23,12 @@ export default Home = () => {
         <ReturnHome />
       </>
     ),
-    クイズ: <Quiz setCurrentPage={setCurrentPage} kanjiList={kanjiList} />,
+    クイズ: (
+      <>
+        <Quiz setCurrentPage={setCurrentPage} kanjiList={kanjiList} />
+        <ReturnHome />
+      </>
+    ),
   };
   return (
     <>
