@@ -26,7 +26,7 @@ export default Home = () => {
     クイズ: (
       <>
         <Quiz setCurrentPage={setCurrentPage} kanjiList={kanjiList} />
-        <ReturnHome />
+        <ReturnHome setCurrentPage={setCurrentPage} />
       </>
     ),
   };
