@@ -1,3 +1,4 @@
+import { singleKanji } from "./N5Kanji.js";
 import ReturnHome from "./ReturnHome.js";
 
 export default Practice = ({ kanjiList }) => {
@@ -7,8 +8,8 @@ export default Practice = ({ kanjiList }) => {
       <label>Target:</label>
       <button>+</button>
       <div>
-        {kanjiList.map((i) => (
-          <p>{i}</p>
+        {kanjiList.map((v, i) => (
+          <p>{() => singlgeKanji(v).Kanji}-</p>
         ))}
       </div>
     </>
