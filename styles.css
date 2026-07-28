@@ -7,12 +7,18 @@ body {
   text-align: center;
 }
 
+.kanjiPractice {
+  border: 2px solid black;
+  padding: 6px;
+}
+
 .kanjiButton {
   background-color: darkred;
   border-radius: 5px;
   color: gold;
   border: 1px solid gold;
   padding: 0.3em;
+  margin: 1em;
   text-decoration: none;
 }
 
@@ -33,6 +39,7 @@ body {
   align-content: center;
   justify-content: center;
   gap: 6px;
+  place-items: center;
   border-radius: 100%;
 }
 
@@ -42,22 +49,19 @@ body {
   height: 70vh;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  margin: 0;
-  column-gap: 6px;
-  row-gap: 0px;
   background: lemonchiffon;
   border: 3px solid darkgreen;
   border-radius: 100%;
 }
 
 .quizBox {
-  width: 15vh;
+  display: flex;
+  width: 13vh;
   height: 10vh;
   color: blue;
   border: goldenrod 3px solid;
   align-items: center;
-  object-fit: cover;
+  justify-content: center;
 }
 
 .kanjiColumn {
