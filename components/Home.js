@@ -19,7 +19,7 @@ export default Home = () => {
     ),
     練習: (
       <>
-        <Practice setCurrentPage={setCurrentPage} kanjiList={kanjiList} />
+        <Practice kanjiList={kanjiList} />
         <ReturnHome setCurrentPage={setCurrentPage} />
       </>
     ),
