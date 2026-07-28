@@ -5,8 +5,9 @@ export default Practice = ({ kanjiList }) => {
   return (
     <>
       <button>-</button>
-      <label>Target:</label>
+      <button>Random</button>
       <button>+</button>
+      <p>Target:</p>
       <div>
         {kanjiList.map((v, i) => (
           <p>{singleKanji(i).Furigana}</p>
