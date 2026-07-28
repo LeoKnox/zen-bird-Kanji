@@ -1,9 +1,11 @@
 import ReturnHome from "./ReturnHome.js";
 
-export default Practice = () => {
+export default Practice = ({ kanjiList }) => {
   return (
-    <div>
-      <ReturnHome />
-    </div>
+    <>
+      {kanjiList.map((i) => (
+        <p>{i}</p>
+      ))}
+    </>
   );
 };
