@@ -14,7 +14,7 @@ export default Practice = ({ kanjiList }) => {
       <p>Target:{target.Furigana}</p>
       <div>
         {kanjiList.map((v, i) => (
-          <p>{singleKanji(i).Furigana}</p>
+          <label className="kanjiPractice">{singleKanji(i).Furigana}</label>
         ))}
       </div>
     </>
