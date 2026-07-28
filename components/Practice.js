@@ -9,7 +9,7 @@ export default Practice = ({ kanjiList }) => {
       <button>+</button>
       <div>
         {kanjiList.map((v, i) => (
-          <p>{() => singlgeKanji(v).Kanji}-</p>
+          <p>{() => singleKanji(i)["Furigana"]}-</p>
         ))}
       </div>
     </>
