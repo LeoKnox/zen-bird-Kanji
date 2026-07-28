@@ -3,9 +3,14 @@ import ReturnHome from "./ReturnHome.js";
 export default Practice = ({ kanjiList }) => {
   return (
     <>
-      {kanjiList.map((i) => (
-        <p>{i}</p>
-      ))}
+      <button>-</button>
+      <label>Target:</label>
+      <button>+</button>
+      <div>
+        {kanjiList.map((i) => (
+          <p>{i}</p>
+        ))}
+      </div>
     </>
   );
 };
