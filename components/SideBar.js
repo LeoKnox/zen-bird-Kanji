@@ -31,7 +31,7 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
         </label>
         <div
           style={{
-            backgroundColor: "transparent",
+            backgroundColor: "inherit",
             padding: "5px",
             margin: "-10px",
           }}
