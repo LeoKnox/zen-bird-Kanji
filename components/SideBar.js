@@ -4,14 +4,14 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
       <div
         className="sideBar"
         style={{
-          display: "grid",
-          alignContent: "start",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
           backgroundColor: "#506b3c",
           color: "#88a564",
           minWidth: "auto",
           padding: "10px",
           minHeight: "60vh",
-          position: "relative",
         }}
       >
         <p>Kanji</p>
