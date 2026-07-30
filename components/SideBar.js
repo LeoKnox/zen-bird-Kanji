@@ -20,6 +20,7 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
             writingMode: "vertical-rl",
             textOrientation: "upright",
             backgroundColor: "#ccff99",
+            alignItems: "center",
             padding: "5px", // move to css file to clear empty
             borderRadius: "1em",
           }}
