@@ -14,7 +14,7 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
           position: "relative",
         }}
       >
-        <div style={{ backgroundColor: "#ccff99", padding: "5px" }}>
+        <div style={{ backgroundColor: "tan", padding: "5px", margin: "0px" }}>
           <button
             className="kanjiButton"
             onClick={() => setCurrentPage("練習")}
