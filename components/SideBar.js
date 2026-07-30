@@ -2,12 +2,16 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
   return (
     <>
       <div
+        className="sideBar"
         style={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "flex-start",
-          gap: "12px",
-          alignItems: "flex-start",
+          display: "grid",
+          alignContent: "start",
+          backgroundColor: "#506b3c",
+          color: "#88a564",
+          minWidth: "auto",
+          padding: "10px",
+          minHeight: "60vh",
+          position: "relative",
         }}
       >
         <button className="kanjiButton" onClick={() => setCurrentPage("練習")}>
@@ -19,21 +23,6 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
         >
           quiz
         </button>
-      </div>
-      <div
-        className="sideBar"
-        style={{
-          display: "grid",
-          alignContent: "start",
-          flex: "0 0 0 1",
-          backgroundColor: "#506b3c",
-          color: "#88a564",
-          minWidth: "auto",
-          padding: "10px",
-          minHeight: "60vh",
-          position: "relative",
-        }}
-      >
         <p>Kanji</p>
         <label
           style={{
