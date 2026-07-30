@@ -1,7 +1,14 @@
 export default SideBar = ({ kanjiList, setCurrentPage }) => {
   return (
     <>
-      <div style={{ position: "absolute", bottom: 0, left: 0, with: "100%" }}>
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "flex-start",
+          gap: "12px",
+        }}
+      >
         <button className="kanjiButton" onClick={() => setCurrentPage("練習")}>
           practice
         </button>
