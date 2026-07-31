@@ -15,7 +15,6 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
           color: "#88a564",
           minWidth: "auto",
           padding: "10px",
-          minHeight: "60vh",
         }}
       >
         <p>Kanji</p>
