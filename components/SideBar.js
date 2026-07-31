@@ -5,6 +5,7 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
         className="sideBar"
         style={{
           display: "flex",
+          position: "sticky",
           flexDirection: "column",
           justifyContent: "flex-start",
           backgroundColor: "#506b3c",
@@ -32,7 +33,14 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
         >
           {kanjiList}
         </label>
-        <div style={{ backgroundColor: "tan", padding: "5px", margin: "-8px",marginTop: "auto" }}>
+        <div
+          style={{
+            backgroundColor: "tan",
+            padding: "5px",
+            margin: "-8px",
+            marginTop: "auto",
+          }}
+        >
           <button
             className="kanjiButton"
             onClick={() => setCurrentPage("練習")}
