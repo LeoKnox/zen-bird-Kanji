@@ -30,7 +30,7 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
           {kanjiList}
         </label>
         <div
-          style={{ backgroundColor: "tan", padding: "5px", margin: "-10px" }}
+          style={{ backgroundColor: "tan", padding: "5px", margin: "-8px" }}
         >
           <button
             className="kanjiButton"
