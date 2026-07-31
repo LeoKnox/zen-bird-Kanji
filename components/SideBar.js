@@ -5,7 +5,10 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
         className="sideBar"
         style={{
           display: "flex",
+          top: "0",
           position: "sticky",
+          height: "100vh",
+          overflow: "auto",
           flexDirection: "column",
           justifyContent: "flex-start",
           backgroundColor: "#506b3c",
