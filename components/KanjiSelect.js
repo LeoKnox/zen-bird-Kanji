@@ -52,13 +52,10 @@ export default KanjiSelect = ({
               id={kanjiId}
               onMouseEnter={() => setHoverKanji(kanjiId)}
               onMouseLeave={() => setHoverKanji(null)}
+              onClick={(e) => updateKanjiList(e)}
             >
               <p>
-                <input
-                  type="checkbox"
-                  value={kanjiId}
-                  onClick={(e) => updateKanjiList(e)}
-                />
+                <input type="checkbox" value={kanjiId} />
                 {kanjiId}
               </p>
               {row.Kanji}
@@ -117,4 +114,3 @@ export default KanjiSelect = ({
     </>
   );
 };
-
