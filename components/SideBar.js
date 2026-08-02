@@ -31,6 +31,7 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
             alignItems: "center",
             padding: "15px", // move to css file to clear empty
             borderRadius: "1em",
+            margin: "10px",
             //alignSelf: "stretch",
             //boxSizing: "border-box",
           }}
