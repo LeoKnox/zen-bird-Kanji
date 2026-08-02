@@ -50,12 +50,16 @@ export default KanjiSelect = ({
             <div
               className="kanjiColumn"
               id={kanjiId}
+              value={kanjiId}
               onMouseEnter={() => setHoverKanji(kanjiId)}
               onMouseLeave={() => setHoverKanji(null)}
-              onClick={(e) => updateKanjiList(e)}
             >
               <p>
-                <input type="checkbox" value={kanjiId} />
+                <input
+                  type="checkbox"
+                  value={kanjiId}
+                  onClick={(e) => updateKanjiList(e)}
+                />
                 {kanjiId}
               </p>
               {row.Kanji}
@@ -85,7 +89,11 @@ export default KanjiSelect = ({
                 {hoverKanji == kanjiId && (
                   <>
                     {Object.entries(row).map((data) => (
-                      <div name="info">
+                      <div
+                        name="info"
+                        value={kanjiId}
+                        onClick={(e) => updateKanjiList(e)}
+                      >
                         <label
                           key={data}
                           style={{
