@@ -8,7 +8,6 @@ export default SideBar = ({ kanjiList, setCurrentPage }) => {
           top: "0",
           position: "sticky",
           alignSelf: "flex-start",
-          height: "100vh",  
           maxHeight: "100vh",
           overflowY: "auto",
           overflowX: "hidden",
