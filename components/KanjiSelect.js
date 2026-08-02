@@ -92,7 +92,7 @@ export default KanjiSelect = ({
                       <div
                         name="info"
                         value={kanjiId}
-                        onClick={(e) => updateKanjiList(e)}
+                        onClick={() => toggleKanji(kanjiId)}
                       >
                         <label
                           key={data}
@@ -117,8 +117,8 @@ export default KanjiSelect = ({
             </div>
           ))}
         </div>
-        <SideBar kanjiList={kanjiList} setCurrentPage={setCurrentPage} />
       </div>
+      <SideBar kanjiList={kanjiList} setCurrentPage={setCurrentPage} />
     </>
   );
 };
