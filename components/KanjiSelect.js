@@ -19,6 +19,7 @@ export default Practice = ({ kanjiList }) => {
           overflowX: "auto",
           overflowY: "hidden",
           scrollSnapType: "x mandatory",
+          scrollbarWidth: "none",
         }}
       >
         {kanjiList.map((v, i) => (
