@@ -12,9 +12,26 @@ export default Practice = ({ kanjiList }) => {
       <button>Random</button>
       <button>+</button>
       <p>Target:{target.Furigana}</p>
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "nowrap",
+          overflowX: "auto",
+          overflowY: "hidden",
+          scrollSnapType: "x mandatory",
+          //scrollbarWidth: "none",
+        }}
+      >
         {kanjiList.map((v, i) => (
-          <label className="kanjiPractice">{singleKanji(i).Furigana}</label>
+          <label
+            className="kanjiPractice"
+            style={{
+              flex: "0 0 calc((100% - 12px * 4) / 5)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {singleKanji(i).Furigana}
+          </label>
         ))}
       </div>
     </>
