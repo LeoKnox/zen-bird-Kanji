@@ -39,14 +39,13 @@ export default Practice = ({ kanjiList }) => {
             style={{
               flex: "0 0 calc((100% - 12px * 4) / 5)",
               whiteSpace: "nowrap",
-              backgroundColor: kanjiList.includes(target.Kanji)
-                ? "red"
-                : "green",
+              backgroundColor:
+                kanjiList[v].Kanji == target.Kanji ? "red" : "green",
             }}
           >
             {singleKanji(i).Furigana}
             <p>
-              {target.Kanji}:{v}
+              {kanjiList[v]}:{v}
             </p>
           </label>
         ))}
