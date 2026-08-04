@@ -3,6 +3,7 @@ import { useState } from "react";
 import ReturnHome from "./ReturnHome.js";
 
 export default Practice = ({ kanjiList }) => {
+  const [active, setActive] = useState(0);
   const [target, setTarget] = useState(
     singleKanji(Math.floor(Math.random() * kanjiList.length))
   );
@@ -19,6 +20,8 @@ export default Practice = ({ kanjiList }) => {
           overflowX: "auto",
           overflowY: "hidden",
           scrollSnapType: "x mandatory",
+          scrollbarWidth: "thin",
+          scrollbarColor: "green transparent",
           //scrollbarWidth: "none",
         }}
       >
@@ -31,6 +34,7 @@ export default Practice = ({ kanjiList }) => {
             }}
           >
             {singleKanji(i).Furigana}
+            <p>{active}</p>
           </label>
         ))}
       </div>
