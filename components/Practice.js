@@ -12,7 +12,10 @@ export default Practice = ({ kanjiList }) => {
       <button>-</button>
       <button
         onDoubleClick={() => setActive(!active)}
-        style={{ backgroundColor: active ? "cyan" : "lightgreen" }}
+        style={{
+          color: "yellow",
+          backgroundColor: active ? "green" : "brown",
+        }}
       >
         Random
       </button>
