@@ -43,7 +43,9 @@ export default Practice = ({ kanjiList }) => {
             }}
           >
             {singleKanji(i).Furigana}
-            <p>{active}</p>
+            <p>
+              {target}:{i}
+            </p>
           </label>
         ))}
       </div>
