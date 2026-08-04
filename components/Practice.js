@@ -10,7 +10,7 @@ export default Practice = ({ kanjiList }) => {
   return (
     <>
       <button>-</button>
-      <button onDblClick={() => setActive(active + 1)}>Random</button>
+      <button onDoubleClick={() => setActive(active + 1)}>Random</button>
       <button>+</button>
       <p>Target:{target.Furigana}</p>
       <div
