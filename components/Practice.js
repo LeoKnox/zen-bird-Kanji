@@ -8,6 +8,10 @@ export default Practice = ({ kanjiList }) => {
     Math.floor(Math.random() * kanjiList.length)
   );
   const [target, setTarget] = useState(singleKanji(find));
+  const changeKanji = () => {
+    setFind(11);
+    setTarget(find);
+  };
   return (
     <>
       <button>-</button>
@@ -37,6 +41,7 @@ export default Practice = ({ kanjiList }) => {
         {kanjiList.map((v, i) => (
           <label
             className="kanjiPractice"
+            onClick={changeKanji}
             style={{
               flex: "0 0 calc((100% - 12px * 4) / 5)",
               whiteSpace: "nowrap",
