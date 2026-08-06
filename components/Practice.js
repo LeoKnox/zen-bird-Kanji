@@ -4,9 +4,10 @@ import ReturnHome from "./ReturnHome.js";
 
 export default Practice = ({ kanjiList }) => {
   const [active, setActive] = useState(0);
-  const [target, setTarget] = useState([
-    singleKanji(Math.floor(Math.random() * kanjiList.length)),
-  ]);
+  const [find, setFind] = useState(
+    Math.floor(Math.random() * kanjiList.length)
+  );
+  const [target, setTarget] = useState(singleKanji(find));
   return (
     <>
       <button>-</button>
@@ -20,7 +21,7 @@ export default Practice = ({ kanjiList }) => {
         Random
       </button>
       <button>+</button>
-      <p>Target:{target[0].Furigana}</p>
+      <p>Target:{target.Furigana}</p>
       <div
         style={{
           display: "flex",
@@ -40,11 +41,13 @@ export default Practice = ({ kanjiList }) => {
               flex: "0 0 calc((100% - 12px * 4) / 5)",
               whiteSpace: "nowrap",
               backgroundColor:
-                kanjiList[v].Kanji == target[0].Kanji ? "red" : "green",
+                kanjiList[v].Kanji == target.Kanji ? "red" : "green",
             }}
           >
             {singleKanji(i).Furigana}
-            <p>:{v}</p>
+            <p>
+              {find}:{v}
+            </p>
           </label>
         ))}
       </div>
