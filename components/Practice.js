@@ -16,6 +16,7 @@ export default Practice = ({ kanjiList }) => {
     <>
       <button>-</button>
       <button
+        onClick={changeKanji}
         onDoubleClick={() => setActive(!active)}
         style={{
           color: "yellow",
@@ -41,7 +42,6 @@ export default Practice = ({ kanjiList }) => {
         {kanjiList.map((v, i) => (
           <label
             className="kanjiPractice"
-            onClick={changeKanji}
             style={{
               flex: "0 0 calc((100% - 12px * 4) / 5)",
               whiteSpace: "nowrap",
