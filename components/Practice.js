@@ -40,8 +40,7 @@ export default Practice = ({ kanjiList }) => {
             style={{
               flex: "0 0 calc((100% - 12px * 4) / 5)",
               whiteSpace: "nowrap",
-              backgroundColor:
-                kanjiList[v].Kanji == target.Kanji ? "red" : "green",
+              backgroundColor: find == v ? "red" : "green",
             }}
           >
             {singleKanji(i).Furigana}
