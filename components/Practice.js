@@ -9,6 +9,9 @@ export default Practice = ({ kanjiList }) => {
   );
   const [target, setTarget] = useState(singleKanji(find));
   const changeKanji = () => {
+    while (active) {
+    await delay(1000); 
+    }
     setFind(Math.floor(Math.random() * kanjiList.length));
     setTarget(find);
   };
