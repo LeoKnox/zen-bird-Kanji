@@ -14,14 +14,12 @@ export default Practice = ({ kanjiList }) => {
       setFind(Math.floor(Math.random() * kanjiList.length));
       setTarget(find);
     }, 2000);
-    return () => clearInterval(id);
+    //return () => clearInterval(id);
   }, [active]);
 
   const changeKanji = () => {
-    setTimeout(function () {
-      setFind(Math.floor(Math.random() * kanjiList.length));
-      setTarget(find);
-    }, 2000);
+    setFind(Math.floor(Math.random() * kanjiList.length));
+    setTarget(find);
   };
   return (
     <>
