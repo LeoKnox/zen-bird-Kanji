@@ -9,11 +9,14 @@ export default Practice = ({ kanjiList }) => {
   );
   const [target, setTarget] = useState(singleKanji(find));
   useEffect(() => {
-    if (!active) return;
-    setTimeout(function () {
-      setFind(Math.floor(Math.random() * kanjiList.length));
-      setTarget(find);
-    }, 2000);
+    let i =0
+    while (active) {
+      setTimeout(function () {
+        setFind(Math.floor(Math.random() * kanjiList.length));
+        setTarget(find);
+        i < 100 ? i++ : return;
+      }, 2000);
+    }
     //return () => clearInterval(id);
   }, [active]);
 
