@@ -14,7 +14,9 @@ export default Practice = ({ kanjiList }) => {
       setTimeout(function () {
         setFind(Math.floor(Math.random() * kanjiList.length));
         setTarget(find);
-        i++;
+        if (i < 50) {
+          return;
+        }
       });
     }
     //return () => clearInterval(id);
