@@ -9,12 +9,10 @@ export default Practice = ({ kanjiList }) => {
     Math.floor(Math.random() * kanjiList.length)
   );
   const target = singleKanji(find);
-  //const [target, setTarget] = useState(singleKanji(find));
   useEffect(() => {
     if (active) {
       const id = setInterval(() => {
         setFind(Math.floor(Math.random() * kanjiList.length));
-        //setTarget(find);
       }, 2000);
 
       return () => clearInterval(id);
@@ -25,7 +23,6 @@ export default Practice = ({ kanjiList }) => {
     let temp = Math.floor(Math.random() * kanjiList.length);
     clickTimeoutRef.current = setTimeout(() => {
       setFind(temp);
-      //setTarget(temp);
     }, 250);
   };
   return (
@@ -42,9 +39,7 @@ export default Practice = ({ kanjiList }) => {
         Random
       </button>
       <button>+</button>
-      <p>
-        Target:{target.Furigana}:{find}
-      </p>
+      <p>Target:{target.Kanji}</p>
       <div
         style={{
           display: "flex",
