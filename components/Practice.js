@@ -40,7 +40,9 @@ export default Practice = ({ kanjiList }) => {
         Random
       </button>
       <button>+</button>
-      <p>Target:{target.Furigana}</p>
+      <p>
+        Target:{target.Furigana}:{find}
+      </p>
       <div
         style={{
           display: "flex",
