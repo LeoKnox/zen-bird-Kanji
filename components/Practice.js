@@ -21,9 +21,10 @@ export default Practice = ({ kanjiList }) => {
   }, [active]);
 
   const changeKanji = () => {
+    let temp = Math.floor(Math.random() * kanjiList.length);
     clickTimeoutRef.current = setTimeout(() => {
-      setFind(Math.floor(Math.random() * kanjiList.length));
-      setTarget(find);
+      setFind(temp);
+      setTarget(temp);
     }, 250);
   };
   return (
@@ -34,6 +35,46 @@ export default Practice = ({ kanjiList }) => {
         onDoubleClick={() => setActive(!active)}
         style={{
           color: "yellow",
+          backgroundColor: active ? "green" : "brown",
+        }}
+      >
+        Random
+      </button>
+      <button>+</button>
+      <p>
+        Target:{target.Furigana}:{find}
+      </p>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "nowrap",
+          overflowX: "auto",
+          overflowY: "hidden",
+          scrollSnapType: "x mandatory",
+          scrollbarWidth: "thin",
+          scrollbarColor: "green transparent",
+          //scrollbarWidth: "none",
+        }}
+      >
+        {kanjiList.map((v, i) => (
+          <label
+            className="kanjiPractice"
+            style={{
+              flex: "0 0 calc((100% - 12px * 4) / 5)",
+              whiteSpace: "nowrap",
+              backgroundColor: find == v ? "red" : "green",
+            }}
+          >
+            {singleKanji(i).Furigana}
+            <p>
+              {find}:{v}
+            </p>
+          </label>
+        ))}
+      </div>
+    </>
+  );
+};
           backgroundColor: active ? "green" : "brown",
         }}
       >
