@@ -20,8 +20,10 @@ export default Practice = ({ kanjiList }) => {
   }, [active]);
 
   const changeKanji = () => {
-    setFind(Math.floor(Math.random() * kanjiList.length));
-    setTarget(find);
+    if (!active) {
+      setFind(Math.floor(Math.random() * kanjiList.length));
+      setTarget(find);
+    }
   };
   return (
     <>
