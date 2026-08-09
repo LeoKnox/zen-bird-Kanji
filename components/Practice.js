@@ -1,5 +1,5 @@
 import { singleKanji } from "./N5Kanji.js";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ReturnHome from "./ReturnHome.js";
 
 export default Practice = ({ kanjiList }) => {
@@ -10,7 +10,6 @@ export default Practice = ({ kanjiList }) => {
   const [target, setTarget] = useState(singleKanji(find));
   useEffect(() => {
     if (active) {
-      const clickTimeoutRef = useRef(null);
       const id = setInterval(() => {
         setFind(Math.floor(Math.random() * kanjiList.length));
         setTarget(find);
@@ -21,6 +20,7 @@ export default Practice = ({ kanjiList }) => {
   }, [active]);
 
   const changeKanji = () => {
+    const clickTimeoutRef = useRef(null);
     clickTimeoutRef.current = setTimeout(() => {
       setFind(Math.floor(Math.random() * kanjiList.length));
       setTarget(find);
