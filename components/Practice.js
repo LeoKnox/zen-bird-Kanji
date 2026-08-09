@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import ReturnHome from "./ReturnHome.js";
 
 export default Practice = ({ kanjiList }) => {
+  const clickTimeoutRef = useRef(null);
   const [active, setActive] = useState(0);
   const [find, setFind] = useState(
     Math.floor(Math.random() * kanjiList.length)
@@ -20,7 +21,6 @@ export default Practice = ({ kanjiList }) => {
   }, [active]);
 
   const changeKanji = () => {
-    const clickTimeoutRef = useRef(null);
     clickTimeoutRef.current = setTimeout(() => {
       setFind(Math.floor(Math.random() * kanjiList.length));
       setTarget(find);
