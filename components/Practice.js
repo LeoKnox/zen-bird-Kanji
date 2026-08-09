@@ -8,12 +8,13 @@ export default Practice = ({ kanjiList }) => {
   const [find, setFind] = useState(
     Math.floor(Math.random() * kanjiList.length)
   );
-  const [target, setTarget] = useState(singleKanji(find));
+  const target = singleKanji(find);
+  //const [target, setTarget] = useState(singleKanji(find));
   useEffect(() => {
     if (active) {
       const id = setInterval(() => {
         setFind(Math.floor(Math.random() * kanjiList.length));
-        setTarget(find);
+        //setTarget(find);
       }, 2000);
 
       return () => clearInterval(id);
@@ -24,7 +25,7 @@ export default Practice = ({ kanjiList }) => {
     let temp = Math.floor(Math.random() * kanjiList.length);
     clickTimeoutRef.current = setTimeout(() => {
       setFind(temp);
-      setTarget(singleKanji(temp));
+      //setTarget(temp);
     }, 250);
   };
   return (
