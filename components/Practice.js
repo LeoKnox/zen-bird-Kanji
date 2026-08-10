@@ -38,7 +38,7 @@ export default Practice = ({ kanjiList }) => {
       >
         Random
       </button>
-      <button>+</button>
+      <button onClick={() => setFind(find + 1)}>+</button>
       <p>Target:{target.Kanji}</p>
       <div
         style={{
