@@ -5,6 +5,7 @@ import ReturnHome from "./ReturnHome.js";
 export default Practice = ({ kanjiList }) => {
   const clickTimeoutRef = useRef(null);
   const [active, setActive] = useState(0);
+  const kanjiKeys = kanjiList.keys();
   const [find, setFind] = useState(
     Math.floor(Math.random() * kanjiList.length)
   );
@@ -27,6 +28,7 @@ export default Practice = ({ kanjiList }) => {
   };
   return (
     <>
+      <p>{kanjiKeys}</p>
       <button
         onClick={() => {
           if (find >= 1) setFind(find - 1);
