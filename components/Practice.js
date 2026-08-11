@@ -5,7 +5,7 @@ import ReturnHome from "./ReturnHome.js";
 export default Practice = ({ kanjiList }) => {
   const clickTimeoutRef = useRef(null);
   const [active, setActive] = useState(0);
-  const kanjiKeys = kanjiList.keys();
+  const kanjiKeys = Object.keys(singleKanji(0));
   const [find, setFind] = useState(
     Math.floor(Math.random() * kanjiList.length)
   );
