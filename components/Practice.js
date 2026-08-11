@@ -30,9 +30,9 @@ export default Practice = ({ kanjiList }) => {
     <>
       <p>
         <select>
-          {kanjiKeys.map((i) => {
-            <select>{i}</select>;
-          })}
+          {kanjiKeys.map((i) => (
+            <select>{i}</select>
+          ))}
         </select>
       </p>
       <button
