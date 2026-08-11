@@ -27,7 +27,13 @@ export default Practice = ({ kanjiList }) => {
   };
   return (
     <>
-      <button onClick={() => find >= 0 ?? setFind(find - 1)}>-</button>
+      <button
+        onClick={() => {
+          if (find >= 0) setFind(find - 1);
+        }}
+      >
+        -
+      </button>
       <button
         onClick={changeKanji}
         onDoubleClick={() => setActive(!active)}
