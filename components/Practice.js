@@ -46,7 +46,7 @@ export default Practice = ({ kanjiList }) => {
       </button>
       <button
         onClick={() => {
-          if (find <= 1) setFind(find + 1);
+          if (find <= kanjiList.length - 2) setFind(find + 1);
         }}
       >
         +
