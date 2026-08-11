@@ -29,7 +29,7 @@ export default Practice = ({ kanjiList }) => {
     <>
       <button
         onClick={() => {
-          if (find >= 0) setFind(find - 1);
+          if (find >= 1) setFind(find - 1);
         }}
       >
         -
