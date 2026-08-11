@@ -28,7 +28,13 @@ export default Practice = ({ kanjiList }) => {
   };
   return (
     <>
-      <p>{kanjiKeys}</p>
+      <p>
+        <select>
+          {kanjiKeys.map((i) => {
+            <select>{i}</select>;
+          })}
+        </select>
+      </p>
       <button
         onClick={() => {
           if (find >= 1) setFind(find - 1);
