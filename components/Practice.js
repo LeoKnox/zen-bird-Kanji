@@ -32,7 +32,7 @@ export default Practice = ({ kanjiList }) => {
       <p>
         <select>
           {kanjiKeys.map((i) => (
-            <select>{kanjiKeys[i]}</select>
+            <option>{i}</option>
           ))}
         </select>
       </p>
