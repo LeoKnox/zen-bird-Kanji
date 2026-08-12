@@ -5,10 +5,11 @@ import ReturnHome from "./ReturnHome.js";
 export default Practice = ({ kanjiList }) => {
   const clickTimeoutRef = useRef(null);
   const [active, setActive] = useState(0);
-  const kanjiKeys = Object.keys(singleKanji(0));
+  const [practiceDisplay, setPracticeDisplay] = useState("Kanji");
   const [find, setFind] = useState(
     Math.floor(Math.random() * kanjiList.length)
   );
+  const kanjiKeys = Object.keys(singleKanji(0));
   const target = singleKanji(find);
   useEffect(() => {
     if (active) {
@@ -66,7 +67,7 @@ export default Practice = ({ kanjiList }) => {
             <option>{i}</option>
           ))}
         </select>
-        :{target.Kanji}
+        :{target[practiceDisplay]}
       </p>
       <div
         style={{
