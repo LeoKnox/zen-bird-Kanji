@@ -60,7 +60,14 @@ export default Practice = ({ kanjiList }) => {
       >
         +
       </button>
-      <p>Target:{target.Kanji}</p>
+      <p>
+        <select>
+          {kanjiKeys.map((i) => (
+            <option>{i}</option>
+          ))}
+        </select>
+        :{target.Kanji}
+      </p>
       <div
         style={{
           display: "flex",
