@@ -28,10 +28,11 @@ export default Practice = ({ kanjiList }) => {
   };
   return (
     <>
+      {kanjiKeys}
       <p>
         <select>
           {kanjiKeys.map((i) => (
-            <select>{i}</select>
+            <select>{kanjiKeys[i]}</select>
           ))}
         </select>
       </p>
