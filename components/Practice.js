@@ -62,7 +62,7 @@ export default Practice = ({ kanjiList }) => {
             <option value={i}>{i}</option>
           ))}
         </select>
-        :{target[practiceDisplay]}
+        <p>{target[practiceDisplay]}</p>
       </div>
       <div
         style={{
