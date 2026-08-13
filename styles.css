@@ -69,9 +69,8 @@ body {
 }
 
 .selectTarget {
-  padding: 1em;
   background-color: beige;
-  font-size: 1.5em;
+  font-size: 2em;
   width: 8em;
   margin-left: auto;
   margin-right: auto;
