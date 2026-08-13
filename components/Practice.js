@@ -53,7 +53,7 @@ export default Practice = ({ kanjiList }) => {
       >
         +
       </button>
-      <p>
+      <div className="selectTarget">
         <select
           className="practiceSelect"
           onChange={(e) => setPracticeDisplay(e.target.value)}
@@ -63,7 +63,7 @@ export default Practice = ({ kanjiList }) => {
           ))}
         </select>
         :{target[practiceDisplay]}
-      </p>
+      </div>
       <div
         style={{
           display: "flex",
