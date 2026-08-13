@@ -68,6 +68,77 @@ body {
   justify-content: center;
 }
 
+.selectTarget {
+  padding: 1em;
+  background-color: beige;
+  font-size: 1.5em;
+  width: 8em;
+}
+
+.kanjiColumn {
+  color: darkgreen;
+  background-color: #ccff99;
+  flex: 0 0 33%;
+  box-sizing: border-box;
+  width: 25%;
+  height: 20vh;
+  border: 10px solid;
+  broder-radius: 20px;
+  border-image: linear-gradient(
+      to bottom,
+      #506b3c 0%,
+      #88a564 50%,
+      #506b3c 100%
+    )
+    1;
+}
+
+.kanjiColumn input[type="checkbox"] {
+  appearance: none;
+  margin-bottom: 0;
+  width: 1em;
+  height: 1em;
+  background: brown;
+}
+
+.kanjiColumn input[type="checkbox"]:checked {
+  appearance: revert;
+  accent-color: gold;
+}
+  grid-template-rows: repeat(2, 12vh);
+  align-content: center;
+  justify-content: center;
+  gap: 6px;
+  place-items: center;
+  border-radius: 100%;
+}
+
+.practiceSelect {
+  color: gold;
+  background-color: brown;
+}
+
+.quizBackground {
+  display: grid;
+  width: 95%;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  background: lemonchiffon;
+  border: 3px solid darkgreen;
+  border-radius: 100%;
+}
+
+.quizBox {
+  display: flex;
+  width: 13vh;
+  height: 10vh;
+  color: blue;
+  border: goldenrod 3px solid;
+  align-items: center;
+  justify-content: center;
+}
+
 .kanjiColumn {
   color: darkgreen;
   background-color: #ccff99;
