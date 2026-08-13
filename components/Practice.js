@@ -29,8 +29,6 @@ export default Practice = ({ kanjiList }) => {
   };
   return (
     <>
-      {kanjiKeys}
-
       <button
         onClick={() => {
           if (find >= 1) setFind(find - 1);
@@ -56,7 +54,10 @@ export default Practice = ({ kanjiList }) => {
         +
       </button>
       <p>
-        <select onChange={(e) => setPracticeDisplay(e.target.value)}>
+        <select
+          className="practiceSelect"
+          onChange={(e) => setPracticeDisplay(e.target.value)}
+        >
           {kanjiKeys.map((i) => (
             <option value={i}>{i}</option>
           ))}
