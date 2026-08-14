@@ -1,6 +1,7 @@
 import { singleKanji } from "./N5Kanji.js";
 import { useState, useEffect, useRef } from "react";
 import ReturnHome from "./ReturnHome.js";
+import DrawingPractice from "./DrawingPractice.js";
 
 export default Practice = ({ kanjiList }) => {
   const clickTimeoutRef = useRef(null);
@@ -63,6 +64,7 @@ export default Practice = ({ kanjiList }) => {
           ))}
         </select>
         <p>{target[practiceDisplay]}</p>
+        <DrawingPractice />
       </div>
       <div
         style={{
