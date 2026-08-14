@@ -7,9 +7,14 @@ body {
   text-align: center;
 }
 
+.drawingPractice {
+  background-color: yellow;
+  padding: 5px;
+  height: 5em;
+}
 .kanjiPractice {
   border: 2px solid black;
-  padding: 6px;
+  padding: 5px;
 }
 
 .kanjiButton {
