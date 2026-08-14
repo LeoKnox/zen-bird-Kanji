@@ -1,3 +1,3 @@
 export default DrawingPractice = () => {
-  return <div>Draw here</div>;
+  return <div className="drawingPractice">Draw here</div>;
 };
