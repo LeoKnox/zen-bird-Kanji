@@ -24,7 +24,6 @@ export default function DrawingPractice() {
   function startDraw(e) {
     const p = getSvgPoint(e.clientX, e.clientY);
 
-    // keep receiving move events
     e.currentTarget?.setPointerCapture?.(e.pointerId);
 
     drawingRef.current.isDrawing = true;
@@ -84,6 +83,8 @@ export default function DrawingPractice() {
         style={{
           border: "1px solid #ccc",
           touchAction: "none",
+          display: "block",
+          width: "100%",
         }}
         onPointerDown={startDraw}
         onPointerMove={moveDraw}
