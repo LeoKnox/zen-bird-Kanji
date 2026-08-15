@@ -80,7 +80,7 @@ export default DrawingPractice = () => {
       <svg
         style={{
           border: "1px solid #ccc",
-          touchAction: "none", // prevents browser gestures from interfering
+          touchAction: "none",
           cursor: "crosshair",
         }}
         onMouseDown={(e) => startDraw(e)}
