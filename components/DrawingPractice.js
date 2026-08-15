@@ -80,6 +80,7 @@ export default function DrawingPractice() {
   return (
     <div className="drawingPractice">
       <svg
+        ref={svgRef}
         style={{
           border: "1px solid #ccc",
           touchAction: "none",
