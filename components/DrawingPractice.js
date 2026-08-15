@@ -1,6 +1,6 @@
 import React, { useMemo, useRef, useState } from "react";
 
-export default DrawingPractice = () => {
+export default function DrawingPractice() {
   const svgRef = useRef(null);
   const [paths, setPaths] = useState([]);
 
@@ -22,52 +22,57 @@ export default DrawingPractice = () => {
   }
 
   function startDraw(e) {
-    const evt = e.nativeEvent ?? e;
-    const p = getSvgPoint(evt.clientX, evt.clientY);
+    const p = getSvgPoint(e.clientX, e.clientY);
+
+    // keep receiving move events
+    e.currentTarget?.setPointerCapture?.(e.pointerId);
 
     drawingRef.current.isDrawing = true;
     drawingRef.current.points = [p];
     drawingRef.current.currentD = `M ${p.x} ${p.y}`;
+
+    setPaths((prev) => [
+      ...prev,
+      { d: drawingRef.current.currentD, _temp: true },
+    ]);
   }
 
   function moveDraw(e) {
-    const { isDrawing, points } = drawingRef.current;
-    if (!isDrawing) return;
+    if (!drawingRef.current.isDrawing) return;
 
-    const evt = e.nativeEvent ?? e;
-    const p = getSvgPoint(evt.clientX, evt.clientY);
-
-    points.push(p);
-    drawingRef.current.currentD = `${drawingRef.current.currentD} L ${p.x} ${p.y}`;
+    const p = getSvgPoint(e.clientX, e.clientY);
+    drawingRef.current.points.push(p);
+    drawingRef.current.currentD += ` L ${p.x} ${p.y}`;
 
     setPaths((prev) => {
+      if (prev.length === 0) return prev;
+
       const last = prev[prev.length - 1];
-      if (!last || last._temp !== true) {
+      if (!last || !last._temp) {
         return [...prev, { d: drawingRef.current.currentD, _temp: true }];
       }
+
       const updated = [...prev];
-      updated[updated.length - 1] = {
-        d: drawingRef.current.currentD,
-        _temp: true,
-      };
+      updated[updated.length - 1] = { ...last, d: drawingRef.current.currentD };
       return updated;
     });
   }
 
   function endDraw() {
-    const { isDrawing } = drawingRef.current;
-    if (!isDrawing) return;
+    if (!drawingRef.current.isDrawing) return;
 
     drawingRef.current.isDrawing = false;
     drawingRef.current.points = [];
     drawingRef.current.currentD = "";
 
     setPaths((prev) => {
-      if (!prev.length) return prev;
+      if (prev.length === 0) return prev;
+
       const last = prev[prev.length - 1];
       if (!last?._temp) return prev;
+
       const updated = [...prev];
-      updated[updated.length - 1] = { d: last.d };
+      updated[updated.length - 1] = { ...last, _temp: false };
       return updated;
     });
   }
@@ -99,4 +104,4 @@ export default DrawingPractice = () => {
       </svg>
     </div>
   );
-};
+}
