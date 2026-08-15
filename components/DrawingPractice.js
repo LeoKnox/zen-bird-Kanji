@@ -104,6 +104,9 @@ export default function DrawingPractice() {
           />
         ))}
       </svg>
+      <div style={{ marginTop: 8 }}>
+        <button onClick={() => setPaths([])}>Clear</button>
+      </div>
     </div>
   );
 }
