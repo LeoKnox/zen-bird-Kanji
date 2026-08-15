@@ -79,10 +79,11 @@ export default DrawingPractice = () => {
           border: "1px solid #ccc",
           touchAction: "none",
         }}
-        onMouseDown={(e) => startDraw(e)}
-        onMouseMove={(e) => moveDraw(e)}
-        onMouseUp={() => endDraw()}
-        onMouseLeave={() => endDraw()}
+        onPointerDown={startDraw}
+        onPointerMove={moveDraw}
+        onPointerUp={endDraw}
+        onPointerCancel={endDraw}
+        onLostPointerCapture={endDraw}
       >
         {paths.map((p, idx) => (
           <path
