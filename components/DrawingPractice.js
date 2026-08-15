@@ -28,9 +28,6 @@ export default DrawingPractice = () => {
     drawingRef.current.isDrawing = true;
     drawingRef.current.points = [p];
     drawingRef.current.currentD = `M ${p.x} ${p.y}`;
-    if (e.currentTarget?.setPointerCapture) {
-      e.currentTarget.setPointerCapture(e.pointerId);
-    }
   }
 
   function moveDraw(e) {
@@ -87,7 +84,6 @@ export default DrawingPractice = () => {
         onMouseUp={() => endDraw()}
         onMouseLeave={() => endDraw()}
       >
-        <rect x="0" y="0" width="100%" height="100%" fill="white" />
         {paths.map((p, idx) => (
           <path
             key={idx}
