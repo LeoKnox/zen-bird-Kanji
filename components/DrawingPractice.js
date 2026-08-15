@@ -81,13 +81,13 @@ export default DrawingPractice = () => {
         style={{
           border: "1px solid #ccc",
           touchAction: "none",
-          cursor: "crosshair",
         }}
         onMouseDown={(e) => startDraw(e)}
         onMouseMove={(e) => moveDraw(e)}
         onMouseUp={() => endDraw()}
         onMouseLeave={() => endDraw()}
       >
+        <rect x="0" y="0" width="100%" height="100%" fill="white" />
         {paths.map((p, idx) => (
           <path
             key={idx}
