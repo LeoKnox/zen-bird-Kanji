@@ -28,6 +28,7 @@ export default Practice = ({ kanjiList }) => {
     clickTimeoutRef.current = setTimeout(() => {
       setFind(temp);
     }, 250);
+    setPaths([]);
   };
   return (
     <>
