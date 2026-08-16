@@ -105,7 +105,9 @@ export default function DrawingPractice() {
         ))}
       </svg>
       <div style={{ marginTop: 8 }}>
-        <button onClick={() => setPaths([])}>Clear</button>
+        <button onClick={() => setPaths([])} className="kanjiButton">
+          Clear
+        </button>
       </div>
     </div>
   );
