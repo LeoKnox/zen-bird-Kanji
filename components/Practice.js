@@ -5,6 +5,7 @@ import DrawingPractice from "./DrawingPractice.js";
 
 export default Practice = ({ kanjiList }) => {
   const clickTimeoutRef = useRef(null);
+  const [paths, setPaths] = useState([]);
   const [active, setActive] = useState(0);
   const [practiceDisplay, setPracticeDisplay] = useState("Kanji");
   const [find, setFind] = useState(
@@ -64,7 +65,7 @@ export default Practice = ({ kanjiList }) => {
           ))}
         </select>
         <p>{target[practiceDisplay]}</p>
-        <DrawingPractice />
+        <DrawingPractice paths={paths} setPaths={setPaths} />
       </div>
       <div
         style={{
