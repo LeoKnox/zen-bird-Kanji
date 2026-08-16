@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 export default function DrawingPractice() {
   const svgRef = useRef(null);
@@ -98,6 +98,7 @@ export default function DrawingPractice() {
             d={p.d}
             fill="none"
             stroke="#111"
+            stroke="blue"
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
