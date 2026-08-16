@@ -1,8 +1,7 @@
 import React, { useRef, useState } from "react";
 
-export default function DrawingPractice() {
+export default function DrawingPractice({ paths, setPaths }) {
   const svgRef = useRef(null);
-  const [paths, setPaths] = useState([]);
 
   const drawingRef = useRef({
     isDrawing: false,
