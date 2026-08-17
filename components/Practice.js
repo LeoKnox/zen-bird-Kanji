@@ -23,12 +23,14 @@ export default Practice = ({ kanjiList }) => {
     }
   }, [active]);
 
-  const changeKanji = () => {
-    let temp = Math.floor(Math.random() * kanjiList.length);
-    clickTimeoutRef.current = setTimeout(() => {
-      setFind(temp);
-    }, 250);
-    setPaths([]);
+  const changeKanji = (offset = "random") => {
+    if (offset == "random") {
+      let temp = Math.floor(Math.random() * kanjiList.length);
+      clickTimeoutRef.current = setTimeout(() => {
+        setFind(temp);
+      }, 250);
+      setPaths([]);
+    }
   };
   return (
     <>
