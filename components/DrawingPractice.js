@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-export default function DrawingPractice({ paths, setPaths }) {
+export default function DrawingPractice({ changeKanji, paths, setPaths }) {
   const svgRef = useRef(null);
 
   const drawingRef = useRef({
@@ -105,7 +105,7 @@ export default function DrawingPractice({ paths, setPaths }) {
         ))}
       </svg>
       <div style={{ marginTop: 8 }}>
-        <button onClick={() => setPaths([])} className="kanjiButton">
+        <button onClick={changeKanji} className="kanjiButton">
           Clear
         </button>
       </div>
