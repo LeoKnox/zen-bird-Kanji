@@ -68,7 +68,11 @@ export default Practice = ({ kanjiList }) => {
           ))}
         </select>
         <p>{target[practiceDisplay]}</p>
-        <DrawingPractice paths={paths} setPaths={setPaths} />
+        <DrawingPractice
+          changeKanji={changeKanji}
+          paths={paths}
+          setPaths={setPaths}
+        />
       </div>
       <div
         style={{
