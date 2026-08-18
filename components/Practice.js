@@ -31,7 +31,9 @@ export default Practice = ({ kanjiList }) => {
       }, 250);
       setPaths([]);
     } else {
-      setPaths([]);
+      if (find <= kanjiList.length - 2 || find >= 1) {
+        setPaths([]);
+      }
     }
   };
   return (
