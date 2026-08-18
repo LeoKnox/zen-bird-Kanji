@@ -30,6 +30,8 @@ export default Practice = ({ kanjiList }) => {
         setFind(temp);
       }, 250);
       setPaths([]);
+    } else {
+      setPaths([]);
     }
   };
   return (
