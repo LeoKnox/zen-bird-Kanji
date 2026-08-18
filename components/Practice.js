@@ -42,7 +42,7 @@ export default Practice = ({ kanjiList }) => {
         -
       </button>
       <button
-        onClick={changeKanji}
+        onClick={() => changeKanji("random")}
         onDoubleClick={() => setActive(!active)}
         style={{
           color: "yellow",
