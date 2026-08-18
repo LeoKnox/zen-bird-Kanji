@@ -105,7 +105,7 @@ export default function DrawingPractice({ changeKanji, paths, setPaths }) {
         ))}
       </svg>
       <div style={{ marginTop: 8 }}>
-        <button onClick={() => changeKanji("random")} className="kanjiButton">
+        <button onClick={() => changeKanji(0)} className="kanjiButton">
           Clear
         </button>
       </div>
