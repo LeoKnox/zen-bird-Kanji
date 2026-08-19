@@ -34,6 +34,9 @@ export default Practice = ({ kanjiList }) => {
       if (find <= kanjiList.length - 2 || find >= 1) {
         setFind(find + offset);
         setPaths([]);
+      } else if (find <= kanjiList.length - 2) {
+        setFind(0);
+        setPaths([]);
       }
     }
   };
@@ -72,7 +75,9 @@ export default Practice = ({ kanjiList }) => {
             <option value={i}>{i}</option>
           ))}
         </select>
-        <p>{target[practiceDisplay]}</p>
+        <p>
+          {target[practiceDisplay]}:{target.Kanji.length}
+        </p>
         <DrawingPractice
           changeKanji={changeKanji}
           paths={paths}
