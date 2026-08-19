@@ -34,8 +34,8 @@ export default Practice = ({ kanjiList }) => {
       if (find <= kanjiList.length - 2 || find >= 1) {
         setFind(find + offset);
         setPaths([]);
-      } else if (find <= kanjiList.length - 2) {
-        setFind(0);
+      } else if (find < kanjiList.length) {
+        setFind(2);
         setPaths([]);
       }
     }
@@ -47,7 +47,7 @@ export default Practice = ({ kanjiList }) => {
           changeKanji(-1);
         }}
       >
-        -
+        -{kanjiList.length}
       </button>
       <button
         onClick={() => changeKanji("random")}
