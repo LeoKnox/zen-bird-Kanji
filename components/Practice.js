@@ -30,7 +30,7 @@ export default Practice = ({ kanjiList }) => {
         setFind(temp);
       }, 250);
       setPaths([]);
-    } else if (find >= kanjiList.length - 1) {
+    } else if (find + offset > kanjiList.length - 1) {
       setFind(0);
       setPaths([]);
     } else if (find == 0) {
