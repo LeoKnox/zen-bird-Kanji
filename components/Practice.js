@@ -79,7 +79,8 @@ export default Practice = ({ kanjiList }) => {
           ))}
         </select>
         <p>
-          {target[practiceDisplay]}:{target.Kanji.length}
+          {target[practiceDisplay]}
+          {/*target.Kanji.length*/}
         </p>
         <DrawingPractice
           changeKanji={changeKanji}
