@@ -109,7 +109,7 @@ export default function DrawingPractice({ changeKanji, paths, setPaths }) {
       <svg
         ref={svgRef}
         style={{
-          border: "1px solid #ccc",
+          //border: "1px solid #ccc",
           touchAction: "none",
           display: "block",
           width: "100%",
