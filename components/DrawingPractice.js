@@ -1,114 +1,142 @@
-import { singleKanji } from "./N5Kanji.js";
-import { useState, useEffect, useRef } from "react";
-import ReturnHome from "./ReturnHome.js";
-import DrawingPractice from "./DrawingPractice.js";
+import React, { useRef, useState } from "react";
 
-export default Practice = ({ kanjiList }) => {
-  const clickTimeoutRef = useRef(null);
-  const [paths, setPaths] = useState([]);
-  const [active, setActive] = useState(0);
-  const [practiceDisplay, setPracticeDisplay] = useState("Kanji");
-  const [find, setFind] = useState(
-    Math.floor(Math.random() * kanjiList.length)
-  );
-  const kanjiKeys = Object.keys(singleKanji(0));
-  const target = singleKanji(find);
-  useEffect(() => {
-    if (active) {
-      const id = setInterval(() => {
-        setFind(Math.floor(Math.random() * kanjiList.length));
-      }, 2000);
+export default function DrawingPractice({ changeKanji, paths, setPaths }) {
+  const svgRef = useRef(null);
 
-      return () => clearInterval(id);
+  const drawingRef = useRef({
+    isDrawing: false,
+    points: [],
+    currentD: "",
+  });
+
+  function getSvgPoint(clientX, clientY) {
+    const svg = svgRef.current;
+    if (!svg) return { x: clientX, y: clientY };
+
+    const rect = svg.getBoundingClientRect();
+    return {
+      x: clientX - rect.left,
+      y: clientY - rect.top,
+    };
+  }
+
+  function startDraw(e) {
+    const svg = e.currentTarget;
+    const point = getSvgPoint(e.clientX, e.clientY);
+    const d = `M ${point.x} ${point.y}`;
+
+    drawingRef.current = {
+      isDrawing: true,
+      pointerId: e.pointerId,
+      currentD: d,
+    };
+
+    svg.setPointerCapture(e.pointerId);
+
+    setPaths((prev) => [
+      ...prev,
+      {
+        id: crypto.randomUUID(),
+        d,
+        _temp: true,
+      },
+    ]);
+  }
+
+  function moveDraw(e) {
+    const drawing = drawingRef.current;
+
+    if (!drawing.isDrawing || drawing.pointerId !== e.pointerId) {
+      return;
     }
-  }, [active]);
 
-  const changeKanji = (offset = "random") => {
-    if (offset == "random") {
-      let temp = Math.floor(Math.random() * kanjiList.length);
-      clickTimeoutRef.current = setTimeout(() => {
-        setFind(temp);
-      }, 250);
-      setPaths([]);
-    } else {
-      if (find <= kanjiList.length - 2 || find >= 1) {
-        setFind(find + offset);
-        setPaths([]);
+    const point = getSvgPoint(e.clientX, e.clientY);
+    drawing.currentD += ` L ${point.x} ${point.y}`;
+
+    const newD = drawing.currentD;
+
+    setPaths((prev) => {
+      const updated = [...prev];
+      const lastIndex = updated.length - 1;
+
+      if (lastIndex < 0 || !updated[lastIndex]._temp) {
+        return prev;
       }
+
+      updated[lastIndex] = {
+        ...updated[lastIndex],
+        d: newD,
+      };
+
+      return updated;
+    });
+  }
+
+  function endDraw(e) {
+    const drawing = drawingRef.current;
+
+    if (!drawing.isDrawing || drawing.pointerId !== e.pointerId) {
+      return;
     }
-  };
+
+    drawingRef.current = {
+      isDrawing: false,
+      pointerId: null,
+      currentD: "",
+    };
+
+    setPaths((prev) => {
+      const updated = [...prev];
+      const lastIndex = updated.length - 1;
+
+      if (lastIndex >= 0 && updated[lastIndex]._temp) {
+        updated[lastIndex] = {
+          ...updated[lastIndex],
+          _temp: false,
+        };
+      }
+
+      return updated;
+    });
+
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+  }
+
   return (
-    <>
-      <button
-        onClick={() => {
-          changeKanji(-1);
-        }}
-      >
-        -
-      </button>
-      <button
-        onClick={() => changeKanji("random")}
-        onDoubleClick={() => setActive(!active)}
+    <div className="drawingPractice">
+      <svg
+        ref={svgRef}
         style={{
-          color: "yellow",
-          backgroundColor: active ? "green" : "brown",
+          border: "1px solid #ccc",
+          touchAction: "none",
+          display: "block",
+          width: "100%",
         }}
+        onPointerDown={startDraw}
+        onPointerMove={moveDraw}
+        onPointerUp={endDraw}
+        onPointerCancel={endDraw}
+        onLostPointerCapture={endDraw}
       >
-        Random
-      </button>
-      <button
-        onClick={() => {
-          changeKanji(1);
-        }}
-      >
-        +
-      </button>
-      <div className="selectTarget">
-        <select
-          className="practiceSelect"
-          onChange={(e) => setPracticeDisplay(e.target.value)}
-        >
-          {kanjiKeys.map((i) => (
-            <option value={i}>{i}</option>
-          ))}
-        </select>
-        <p>
-          {target[practiceDisplay]}:{target.Kanji.length}
-        </p>
-        <DrawingPractice
-          changeKanji={changeKanji}
-          paths={paths}
-          setPaths={setPaths}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "nowrap",
-          overflowX: "auto",
-          overflowY: "hidden",
-          scrollSnapType: "x mandatory",
-          scrollbarWidth: "thin",
-          scrollbarColor: "green transparent",
-          //scrollbarWidth: "none",
-        }}
-      >
-        {kanjiList.map((v, i) => (
-          <label
-            className="kanjiPractice"
-            style={{
-              flex: "0 0 calc((100% - 12px * 4) / 5)",
-              whiteSpace: "nowrap",
-              backgroundColor: find == v ? "red" : "green",
-            }}
-          >
-            {singleKanji(i).Furigana}
-            <p>
-              {find}:{v}
-            </p>
-          </label>
+        {paths.map((p, idx) => (
+          <path
+            key={idx}
+            d={p.d}
+            fill="none"
+            stroke="blue"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         ))}
+      </svg>
+      <div style={{ marginTop: 8 }}>
+        <button onClick={() => changeKanji(0)} className="kanjiButton">
+          Clear
+        </button>
       </div>
-    </>
+    </div>
   );
-};
+}
